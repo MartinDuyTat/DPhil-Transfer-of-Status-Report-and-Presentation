@@ -1,0 +1,157 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt, a4paper, notitlepage, onecolumn]{article}
+\usepackage[UKenglish]{babel}                   % UK style
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}               % Margin size
+\usepackage{hyperref}                           % Coloured hyperlinks
+  \hypersetup{colorlinks = true}
+\usepackage{lmodern}                            % Modern fonts
+\usepackage{graphicx}            % For figures
+\usepackage[percent]{overpic}% For figures with text overlay
+\usepackage{amsmath,amssymb}   % Mathematical symbols
+\usepackage{mathtools}
+\usepackage{siunitx}        % SI-units
+\sisetup{exponent-product = \cdot}      % Dot product instead of cross product
+\sisetup{separate-uncertainty = true}   % Plus-minus uncertainty
+\usepackage{physics}                            % Elegant equations in physics
+\usepackage{booktabs}                     % Nice lines, for instance in tables
+\usepackage[font=small,labelfont=bf]{caption}% Caption
+\usepackage{float}                              % Table do not move with [H].
+\usepackage{subcaption}                         % For subfigures
+\usepackage[en-GB]{datetime2}                          % UK date format
+\usepackage{listings}                           %Source code
+\usepackage{feynmp}                             % Feynman diagrams
+\DeclareGraphicsRule{*}{mps}{*}{}               % Include Feynman diagrams
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Determination of the CKM angle $\gamma$ in $B^\pm\to DK^\pm, D\pi^\pm$ decays and strong phase determination of $D\to K^+K^-\pi^+\pi^-$ at BESIII}
+\author{Martin Duy Tat}
+\date{\today}
+\numberwithin{equation}{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\begin{abstract}
+\noindent Write abstract at the end
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\noindent Introduce $\gamma$, GGSZ method and strong phase input from BESIII
+
+\begin{figure}[H]
+  \centering
+  \vspace{0.3cm}
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \begin{fmffile}{fgraph_example1}
+      \setlength{\unitlength}{0.4cm}
+      \begin{fmfgraph*}(8,5)
+        \fmfleft{i1,i2}
+        \fmfright{o1,o2}
+        \fmflabel{$e^-$}{i1}
+        \fmflabel{$e^+$}{i2}
+        \fmflabel{$e^-$}{o1}
+        \fmflabel{$e^+$}{o2}
+        \fmf{fermion}{i1,w1}
+        \fmf{fermion}{w1,o1}
+        \fmf{boson,label=$\gamma$}{w1,w2}
+        \fmf{fermion}{w2,i2}
+        \fmf{fermion}{o2,w2}
+      \end{fmfgraph*}
+    \end{fmffile}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \begin{fmffile}{fgraph_example2}
+      \setlength{\unitlength}{0.4cm}
+      \begin{fmfgraph*}(8,5)
+        \fmfleft{i1,i2}
+        \fmfright{o1,o2}
+        \fmflabel{$e^-$}{i1}
+        \fmflabel{$e^+$}{i2}
+        \fmflabel{$e^-$}{o1}
+        \fmflabel{$e^+$}{o2}
+        \fmf{fermion}{i1,w1}
+        \fmf{fermion}{w1,i2}
+        \fmf{boson,label=$\gamma$}{w1,w2}
+        \fmf{fermion}{w2,o1}
+        \fmf{fermion}{o2,w2}
+      \end{fmfgraph*}
+    \end{fmffile}
+  \end{subfigure}
+  \vspace{0.3cm}
+  \caption{Examples of Feynman diagrams for scattering of an electron $e^-$ and a position $e^+$.}
+  \label{fig_feynman_diagram}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{LHCb detector}
+\noindent Briefly describe the VELO and RICH
+
+\begin{figure}[H] 
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{LHCb detector overview}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{LHCb detector overview}
+  \end{subfigure}
+  \caption{}
+  \label{fig_lhcb_detector}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Binning scheme}
+\noindent Describe the binning scheme developed and toy studies for testing it
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{$B^\pm$ candidate selection}
+\subsection{Signal candidate requirements}
+\noindent Explain how signal events are selected
+
+\begin{table}[H]
+  \centering
+  \caption{Requirements}
+  \label{data}
+  \begin{tabular}{cc} 
+    \toprule
+    Letter & Numerical value \\
+    \midrule
+    $c$ & $\SI{299792458}{\meter\per\second}$ \\
+    $G$ & $\SI{6.67384e-11}{\newton\meter\squared\per\kilogram\squared}$ \\
+    $\hbar$ & $\SI{1.05457e-34}{\joule\second}$ \\
+    $k_B$ & $\SI{1.38065e-23}{\joule\per\kelvin}$ \\
+    $e$ & $\SI{1.60218e-19}{\coulomb}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Background from $D^0\to K^-\pi^+\pi^-\pi^+$}
+\noindent Show studies of $K3\pi$ contamination
+
+\subsection{Charmless backgrounds}
+\noindent Show how flight significance cut removes $B\to KKK\pi\pi$ and mention that $B\to KK\pi\pi\pi$ is insignificant
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fit to extract CP observables}
+\subsection{Global fit and invariant mass spectra}
+\noindent State the fit procedure for global fit and show results of global fit for Run $2$, including yields
+
+\subsection{Binned CP fit and CP observables}
+\noindent Explain the binned CP fit to extract CP observables
+
+\subsection{Validation of fit procedure with toy studies}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion of future work}
+\noindent Discuss the plan further
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                          
+\bibliography{references}
+\bibliographystyle{unsrt}
+
+\end{document}
