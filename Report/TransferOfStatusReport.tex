@@ -6,25 +6,31 @@
 \usepackage{hyperref}                           % Coloured hyperlinks
   \hypersetup{colorlinks = true}
 \usepackage{lmodern}                            % Modern fonts
-\usepackage{graphicx}            % For figures
-\usepackage[percent]{overpic}% For figures with text overlay
-\usepackage{amsmath,amssymb}   % Mathematical symbols
+\usepackage{graphicx}                           % For figures
+\usepackage[percent]{overpic}                   % For figures with text overlay
+\usepackage{amsmath,amssymb}                    % Mathematical symbols
 \usepackage{mathtools}
-\usepackage{siunitx}        % SI-units
-\sisetup{exponent-product = \cdot}      % Dot product instead of cross product
-\sisetup{separate-uncertainty = true}   % Plus-minus uncertainty
+\usepackage{siunitx}                            % SI-units
+%\sisetup{exponent-product = \cdot}             % Dot product instead of cross product
+\sisetup{separate-uncertainty = true}           % Plus-minus uncertainty
 \usepackage{physics}                            % Elegant equations in physics
-\usepackage{booktabs}                     % Nice lines, for instance in tables
+\usepackage{booktabs}                           % Nice lines, for instance in tables
 \usepackage[font=small,labelfont=bf]{caption}% Caption
 \usepackage{float}                              % Table do not move with [H].
 \usepackage{subcaption}                         % For subfigures
-\usepackage[en-GB]{datetime2}                          % UK date format
+\usepackage[en-GB]{datetime2}                   % UK date format
 \usepackage{listings}                           %Source code
 \usepackage{feynmp}                             % Feynman diagrams
 \DeclareGraphicsRule{*}{mps}{*}{}               % Include Feynman diagrams
 \usepackage{scalerel}
 \newcommand{\mylbrace}[2]{\vspace{#2pt}\hspace{6pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{\lbrace}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{.}}
 \newcommand{\myrbrace}[2]{\vspace{#2pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{.}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{6pt}}
+\usepackage{xspace}                             % Fancy LHCb symbols
+\usepackage{upgreek}
+\def\pythia     {\mbox{\textsc{Pythia}}\xspace}
+\def\evtgen     {\mbox{\textsc{EvtGen}}\xspace}
+\def\photos     {\mbox{\textsc{Photos}}\xspace}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Determination of the CKM angle $\gamma$ in $B^\pm\to DK^\pm, D\pi^\pm$ decays and strong phase determination of $D\to K^+K^-\pi^+\pi^-$ at BESIII}
 \author{Martin Duy Tat}
@@ -111,11 +117,87 @@ A wide range of subsequent $D$ decays has been studied. Most recently, the measu
 
 A significant challenge with this analysis is that the $D\to K^+K^-\pi^+\pi^-$ decay is a multi-body decay, so the strong phase difference between the $D^0$ and $\bar{D^0}$ decays varies non-trivially across phase space. Moreover, with four particles in the final state phase space becomes five-dimensional. To predict this strong phase difference, a decay model, such as one developed by LHCb, may be used. However, such a model introduces systematic uncertainties due to modelling.
 
-In this analysis, a model-independent approach is chosen, in which strong phases are determined at a charm factory, BESIII. Here, quantum correlated $D^0\bar{D^0}$ pairs are produced at the $\psi(3770)$ resonance. The amplitude-averaged strong phases are measured in bins of the $D\to K^+K^-\pi^+\pi^-$ phase space. The choice of binning scheme may enhace the sensitivity to $\gamma$. However, a poor choice of binning scheme may only decrease the statistical sensitivity, but not bias the result. With a model-independent approach, one therefore eliminates the systematic uncertainty due to modelling.
+In this analysis, a model-independent approach is chosen, in which strong phases are determined at a charm factory, BESIII, where, quantum correlated $D^0\bar{D^0}$ pairs are produced at the $\psi(3770)$ resonance. The amplitude-averaged strong phases are measured in bins of the $D\to K^+K^-\pi^+\pi^-$ phase space. The choice of binning scheme may enhace the sensitivity to $\gamma$. However, a poor choice of binning scheme may only decrease the statistical sensitivity, but not bias the result. With a model-independent approach, one therefore eliminates the systematic uncertainty due to modelling.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Formalism}
+\subsection{\texorpdfstring{$\gamma$}{gamma} sensitity through \texorpdfstring{$B^\pm$}{B} decays}
+The amplitude of $B^\pm\to DK^\pm$ is a coherent sum of the diagrams in Fig. \ref{fig_feynman_B2DK},
+
+\begin{align}
+  \mathcal{A}(B^-\to DK^-) =& \mathcal{A}_D + r_B^{DK}e^{i(\delta_B^{DK} - \gamma)}\mathcal{A}_{\bar{D}}, \label{eq_Bm2DKm} \\
+  \mathcal{A}(B^+\to DK^+) =& \mathcal{A}_{\bar{D}} + r_B^{DK}e^{i(\delta_B^{DK} + \gamma)}\mathcal{A}_D, \label{eq_Bp2DKp}
+\end{align}
+where $r_B$ is the relative magnitude of the diagrams in Fig. \ref{fig_feynman_B2DK} and $A_{D, \bar{D}}$ are the amplitudes for the $D$ decay as a function of phase space. $\delta_B^{DK}$ is the strong phase of the $B^\pm\to DK^\pm$ decay and is invariant under CP, while $\gamma$ is the weak phase that swaps sign under CP.
+
+The $B^\pm\to DK^\pm$ decay rate is considered in $2\times N$ bins of phase space, labelled $i = -N, ..., N$, excluding zero. Bin $i$ is related to $-i$ by a CP transformation. When integrating the square of Eqs. \eqref{eq_Bm2DKm}-\eqref{eq_Bp2DKp}, the $B^-\to DK^-$ decay rate in bin $i$ and $B^+\to DK^+$ decay rate in bin $-i$ are
+
+\begin{align}
+  \Gamma^-_i = h_{B^-}\Big[F_i + \big((x_-^{DK})^2 + (y_-^{DK})^2\big)F_{-i} + 2\sqrt{F_iF_{-i}}\big(x_-^{DK}c_i + y_-^{DK}s_i\big)\Big], \label{eq_Bm2DKm_rate} \\
+  \Gamma^+_{-i} = h_{B^+}\Big[F_i + \big((x_+^{DK})^2 + (y_+^{DK})^2\big)F_{-i} + 2\sqrt{F_iF_{-i}}\big(x_+^{DK}c_i + y_+^{DK}s_i\big)\Big], \label{eq_Bp2DKp_rate}
+\end{align}
+where
+
+\begin{equation*}
+  c_i = \frac{\int_i\dd{\vb{x}}\abs{\mathcal{A}_D}\abs{\mathcal{A}_{\bar{D}}}\cos(\Delta\delta_D)}{\sqrt{\int_i\dd{\vb{x}}\abs{\mathcal{A}_D}^2\int_i\dd{\vb{x}}\abs{\mathcal{A}_{\bar{D}}}^2}}, \quad s_i = \frac{\int_i\dd{\vb{x}}\abs{\mathcal{A}_D}\abs{\mathcal{A}_{\bar{D}}}\sin(\Delta\delta_D)}{\sqrt{\int_i\dd{\vb{x}}\abs{\mathcal{A}_D}^2\int_i\dd{\vb{x}}\abs{\mathcal{A}_{\bar{D}}}^2}}, \quad F_i = \frac{\int_i\dd{\vb{x}}\abs{\mathcal{A}_D}^2}{\sum_i\int_i\dd{\vb{x}}\abs{\mathcal{A}_D}^2}.
+\end{equation*}
+$c_i$ and $s_i$ is the strong phase difference $\Delta\delta_D$ between the $B^-\to D^0K^-$ and $B^+\to\bar{D^0}K^+$ decays, amplitude-averaged over bin $i$. $F_i$ is the fractional yield of $B^-\to D^0K^-$ in bin $i$, and assuming CP conservation in $D$ decays the corresponding fractional yield of $B^+\to D^0K^+$ in bin $i$ is $F_{-i}$. $h_{B^\pm}$ are a normalization constants.
+
+Furthermore, we define the CP observables
+
+\begin{equation*}
+  x_\pm^{DK} = r_B^{DK}\cos(\delta_B^{DK}\pm\gamma), \quad  y_\pm^{DK} = r_B^{DK}\sin(\delta_B^{DK}\pm\gamma).
+\end{equation*}
+
+Therefore, by counting the number of $B^\pm\to DK^\pm$ decays in bins of phase space, one can do a simultaneous fit of Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate} one can obtain the CP observables $x_\pm^{DK}$ and $y_\pm^{DK}$. It is the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate} which causes CP-violation. A clever choice of binning scheme will enhance these interferences, which makes the fit more sensitive to the CP-observables, which can then be interpreted in terms of $\gamma$, $\delta_B^{DK}$ and $r_B^{DK}$.
+
+The fit will require external inputs for $c_i$ and $s_i$ from BESIII. In addition, the $F_i$ may either be obtained from flavour tagged $D$ decays, or treated as floating variables in the fit. In this analysis, the second method is preferred in order to reduce systmatic uncertainties due to differences in phase space efficiencies. However, to constrain the $F_i$ and improve the fit stability, the analogous decay mode $B^\pm\to D\pi^\pm$, which has a similar selection and detector signature, is also included as a signal mode in the simultaneous fit. The common topology also means the $F_i$ will be the same, but this mode has a much smaller CP violation due to interference because $r_B^{D\pi}$ is expected to be much smaller than $r_B^{DK}$.
+
+\subsection{Strong phase and quantum correlations}
+The strong phase differences $\Delta\delta_D$ of $D\to K^+K^-\pi^+\pi^-$ decays are directly measured in quantum correlated $D^0\bar{D^0}$ decays, using the method of double tagging. This method involves reconstructing either one or both $D$ meson decays. If one of the $D$ mesons is reconstructed in some mode final state $f$, one can obtain the single tag yield of $f$. If both $D$ decays are reconstructed in final states $f$ and $g$, the corresponding double tag yield is obtained. The double tag method is useful when one of the $D$ mesons is reconstructed as $D\to K^+K^-\pi^+\pi^-$, known as the signal mode, and the other $D$ meson decays to a known tag mode.
+
+In particular, if the tag mode is a flavour tag, such as $K^-\pi^+$, one can deduce, through quantum correlations, the original flavour of the $D$ meson on the signal side. One can therefore define a quantity $K_i$, which is yield of flavour tagged $D^0\to K^+K^-\pi^+\pi^-$ events in bin $i$. The corresponding yield for $\bar{D^0}$ decays are then placed in bin $-i$.
+
+The sensitivity to the cosine of the strong phase occurs when the tag mode is a CP eigenstate, or some self-conjugate state with known CP-even fraction $F_+$. The yield of CP tagged $D\to K^+K^-\pi^+\pi^-$ events in bin $i$ is given by
+
+\begin{equation}
+  M_i^\pm = \frac{S_\pm}{2S_f}\Big[K_i - 2c_i(2F_+ - 1)\sqrt{K_iK_{-i}} + K_{-i}\Big],
+\end{equation}
+where $S\pm$ and $S_f$ are the single tag yields of the CP and flavour tag modes used, respectively. For CP even (odd) modes, $F_+ = +1$ ($-1$). To get sensitivity to the sine of the strong phase, the tag mode must be a self-conjugate mode, and the analogous expression is
+
+\begin{equation}
+  M_{ij} = \frac{N_{D\bar{D}}}{2S_fS_f'}\Big[K_iK'_{-j} + 2\sqrt{K_iK'_{-j}K_{-i}K'_j}(c_i'c_j + s_i's_j) + K_{-i}K'_j\Big],
+\end{equation}
+where $N_{D\bar{D}}$ is the total number of $D^0\bar{D^0}$ pairs produced. Here both final states $f$ and $f'$ are reconstructed in bins $(i, j)$ of phase space. In the simplest case, $f = f' = K^+K^-\pi^+\pi^-$, in which $c'_i = c_i$ and $s'_i = s_i$ are all obtained from a fit. One can also choose $f = K^+K^-\pi^+\pi^-$ and $f' = K_S\pi^+\pi^-$, for which the strong phases are already well known.
+
+Once all single and double tag yields have been extracted, a maximum likelihood fit is performed to obtain $c_i$ and $s_i$. A table of all tag modes is shown in Table \ref{table_tag_modes}.
+
+\begin{table}[H]
+  \centering
+  \caption{Tag modes used in the BESIII double tag analysis. Subsequent decays are shown in parentheses. CP conjugates of flavour modes are implied.}
+  \label{table_tag_modes}
+  \begin{tabular}{cccc} 
+    \toprule
+    Flavour & CP even & CP odd & Self conjugate \\
+    \midrule
+    $K^-\pi^+$, $K^-\pi^+\pi^0$, & $K^+K^-$, $\pi^+\pi^-$,                  & $K_S^0\pi^0$, $K_S^0\phi$,                  & $K_S^0\pi^+\pi^-$, \\
+    $K^-\pi^+\pi^-\pi^+$,        & $\pi^+\pi^-\pi^0$, $K_S^0\pi^0\pi^0$,    & $K_S^0\eta(\gamma\gamma, \pi^+\pi^-\pi^0)$, & $K^+K^-\pi^+\pi^-$ \\
+    $K^- e^+\nu_e$               & $K_L^0\pi^0$, $K_L^0\eta(\gamma\gamma)$, & $K_S^0\omega(\pi^+\pi^-\pi^0)$,             & \\
+                                 & $K_L^0\omega(\pi^+\pi^-\pi^0)$           & $K_S^0\eta'(\pi^+\pi^-\eta(\gamma\gamma))$  & \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Currently, BESII has collected $\SI{2.932}{\femto\per\barn}$ of data at the $\psi(3770)$ resonance during $2010$-$2011$, which is unsufficient for doing a maximum likelihood fit. However, a significant increase in data is expected from $2022$, allowing for a precise determination of $c_i$ and $s_i$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{LHCb detector}
-\noindent Briefly describe the VELO and RICH
+\noindent The LHCb is a single arm forward spectrometer designed to study beauty and charm hadrons in $pp$ collisions at the LHC. The main components important for this analysis are the high precision tracking system and the two Ring Imaging Cherencov counters (RICH1 and RICH2).
+
+The tracking system includes the Vertex Locator (VELO). The VELO consists of silicon strip modules close to the interaction point, which provides high precision tracking and identification of displaced secondary vertices that are important for beauty and charm physics. A dipole magnet with bending power of about $\SI{4}{\tesla\meter}$ together with three tracking stations of silicon strip detectors and straw drift tubes placed downstream provides a measurement of the momentum of charged particles with an uncertainty of $0.5\%$ at low momentum at $1.0\%$ at $\SI{200}{\giga\eV}$. The impact parameter is measured with a resolution of $(15 + 29/p_T)\si{\micro\meter}$, where $p_T$ is the transverse momentum.
+
+The two RICH detectors, together with the tracking system and the calorimeter system, separates kaons from pions. The upstream RICH1 detector covers the lower momentum range up to $\SI{60}{\giga\eV}$ while the downstream RICH2 covers the higher momentum range from $\SI{15}{\giga\eV}$ to $\SI{100}{\giga\eV}$.
+
+To model the kinematic distributions of signal and background components and determine selection efficiencies, simulations of $pp$ collisions are generated in \pythia. Decays are described by \evtgen and final state radiation is generated witih \photos. In addition, models of decay amplitudes are incorporated using the AmpGen framework.
 
 \begin{figure}[H] 
   \centering
@@ -142,22 +224,10 @@ In this analysis, a model-independent approach is chosen, in which strong phases
 \subsection{Signal candidate requirements}
 \noindent Explain how signal events are selected
 
-\begin{table}[H]
-  \centering
-  \caption{Requirements}
-  \label{data}
-  \begin{tabular}{cc} 
-    \toprule
-    Letter & Numerical value \\
-    \midrule
-    $c$ & $\SI{299792458}{\meter\per\second}$ \\
-    $G$ & $\SI{6.67384e-11}{\newton\meter\squared\per\kilogram\squared}$ \\
-    $\hbar$ & $\SI{1.05457e-34}{\joule\second}$ \\
-    $k_B$ & $\SI{1.38065e-23}{\joule\per\kelvin}$ \\
-    $e$ & $\SI{1.60218e-19}{\coulomb}$ \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+
+
+\subsection{Boosted Decision Tree}
+\noindent Show the performance of the BDT
 
 \subsection{Background from \texorpdfstring{$D^0\to K^-\pi^+\pi^-\pi^+$}{D->Kpipipi}}
 \noindent Show studies of $K3\pi$ contamination
