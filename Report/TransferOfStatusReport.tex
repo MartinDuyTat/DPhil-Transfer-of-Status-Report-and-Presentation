@@ -155,6 +155,14 @@ Therefore, by counting the number of $B^\pm\to DK^\pm$ decays in bins of phase s
 
 The fit will require external inputs for $c_i$ and $s_i$ from BESIII. In addition, the $F_i$ may either be obtained from flavour tagged $D$ decays, or treated as floating variables in the fit. In this analysis, the second method is preferred in order to reduce systmatic uncertainties due to differences in phase space efficiencies. However, to constrain the $F_i$ and improve the fit stability, the analogous decay mode $B^\pm\to D\pi^\pm$, which has a similar selection and detector signature, is also included as a signal mode in the simultaneous fit. The common topology also means the $F_i$ will be the same, but this mode has a much smaller CP-violation due to interference because $r_B^{D\pi}$ is expected to be much smaller than $r_B^{DK}$.
 
+Since not all CP variables are independent, the fit stability is improved by introducing the variables
+
+\begin{equation}
+  x_\xi^{D\pi} = \Re(\xi^{D\pi}), \quad y_\xi^{D\pi} = \Im(\xi^{D\pi}), \quad \xi^{D\pi} = \frac{r_B^{D\pi}}{r_B^{DK}}e^{i(\delta_B^{D\pi} - \delta_B^{DK})}.
+\end{equation}
+
+Therefore, in the final fit the CP observables are $x_\pm^{DK}$, $y_\pm^{DK}$, $x_\xi^{D\pi}$ and $y_\xi^{D\pi}$.
+
 \subsection{Strong phase and quantum correlations}
 The strong phase differences $\Delta\delta_D$ of $D\to K^+K^-\pi^+\pi^-$ decays are directly measured in quantum correlated $D^0\bar{D^0}$ decays, using the method of double tagging. This method involves reconstructing either one or both $D$ meson decays. If one of the $D$ mesons is reconstructed in some mode final state $f$, one can obtain the single tag yield of $f$. If both $D$ decays are reconstructed in final states $f$ and $g$, the corresponding double tag yield is obtained. The double tag method is useful when one of the $D$ mesons is reconstructed as $D\to K^+K^-\pi^+\pi^-$, known as the signal mode, and the other $D$ meson decays to a known tag mode.
 
@@ -164,11 +172,13 @@ The sensitivity to the cosine of the strong phase occurs when the tag mode is a 
 
 \begin{equation}
   M_i^\pm = \frac{S_\pm}{2S_f}\Big[K_i - 2c_i(2F_+ - 1)\sqrt{K_iK_{-i}} + K_{-i}\Big],
+  \label{eq_Mi}
 \end{equation}
 where $S\pm$ and $S_f$ are the single tag yields of the CP and flavour tag modes used, respectively. For CP even (odd) modes, $F_+ = +1$ ($-1$). To get sensitivity to the sine of the strong phase, the tag mode must be a self-conjugate mode, and the analogous expression is
 
 \begin{equation}
   M_{ij} = \frac{N_{D\bar{D}}}{2S_fS_f'}\Big[K_iK'_{-j} + 2\sqrt{K_iK'_{-j}K_{-i}K'_j}(c_i'c_j + s_i's_j) + K_{-i}K'_j\Big],
+  \label{eq_Mij}
 \end{equation}
 where $N_{D\bar{D}}$ is the total number of $D^0\bar{D^0}$ pairs produced. Here both final states $f$ and $f'$ are reconstructed in bins $(i, j)$ of phase space. In the simplest case, $f = f' = K^+K^-\pi^+\pi^-$, in which $c'_i = c_i$ and $s'_i = s_i$ are all obtained from a fit. One can also choose $f = K^+K^-\pi^+\pi^-$ and $f' = K_S\pi^+\pi^-$, for which the strong phases are already well known.
 
@@ -203,7 +213,8 @@ To model the kinematic distributions of signal and background components and det
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Binning scheme}
-\noindent In a three-body decay, such as $D\to K_S^0\pi^+\pi^-$, the two-dimensional phase space may be visualized in a two-dimensional Dalitz plot. In an analysis analogous to $D\to K^+K^-\pi^+\pi^-$, the Dalitz space was separated into bins of similar strong phase, such that the amplitude-averaged strong phases $c_i$ and $s_i$ were not diluted due to binning. In addition, the Dalitz plot was split symmetrically into bins with positively and negatively indexed bins, such that mainly Cabbibo favoured resonances and doubly suppressed Cabbibo resonances were on opposite sides of each other. Such a clever choice of bins will therefore enhance the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate}, and thus enhance the sensitivity to CP-violation effects.
+\label{section_binning_scheme}
+\noindent In a three-body decay, such as $D\to K_S^0\pi^+\pi^-$, the two-dimensional phase space may be visualized in a two-dimensional Dalitz plot. In an analysis analogous to $D\to K^+K^-\pi^+\pi^-$, the Dalitz space was separated into bins of similar strong phase, such that the amplitude-averaged strong phases $c_i$ and $s_i$ were not diluted due to binning. In addition, the Dalitz plot was split symmetrically into bins with positively and negatively indexed bins, such that most Cabbibo favoured resonances and doubly suppressed Cabbibo resonances were on opposite sides of each other. Such a clever choice of bins will therefore enhance the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate}, and thus enhance the sensitivity to CP-violation effects.
 
 A similar choice of binning must be determined for the four-body decay mode $D\to K^+K^-\pi^+\pi^-$. While similar in many ways, this phase space is five-dimensional and cannot easily be visualized. Instead, an amplitude model is used to predict the decay amplitude and strong phase difference. The model, implemented using the AmpGen framework, takes in the momenta of the $D$ daughter particles, and the output is used to calculate the $D\to K^+K^-\pi^+\pi^-$ decay amplitude $\mathcal{A}(D)$. One can then define
 
@@ -269,36 +280,197 @@ The fitted values of $\gamma$ from all the toy experiments are shown in Fig. \re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\texorpdfstring{$B^\pm$}{B} candidate selection}
 \subsection{Signal candidate requirements}
-\noindent Explain how signal events are selected
+\noindent The $B^\pm\to Dh^\pm$ candidates, with $h^\pm = \pi^\pm, K^\pm$ and $D^\to K^+K^-\pi^+\pi^-$, are reconstructed from five charged tracks. The standard track and trigger requirements mainly follows that of Ref. \ref{}. To ensure that there is a real $D$ meson in the selection, the four charged tracks from $D$ are required to be inside a mass window of $\SI{25}{\mega\eV}$ of the PDG mass. Then the tracks are refitted with their invariant mass constrained to the PDG value and its momentum is required to point back to the primary vertex. A cut on the $\chi^2$ at $\ln(\chi^2) < 3$ will remove most of the sideband background in the $D$ invariant mass.
 
+A mutually exclusive Particle Identification (PID) cut is imposed to separate the $B^\pm\to D\pi^\pm$ and $B^\pm\to DK^\pm$ candidates. In addition the $K^\pm$ daughter from $D$ and the direct $h^\pm$ daughter from $B^\pm$ are required to have momentum $p < \SI{100}{\giga\eV}$ to be inside the optimal range for the RICH to distinuish pions and kaons.
 
+More specialized selection, discussed in Sections \ref{subsection_BDT}-\ref{subsection_charmless}, are considered to remove specific backgrounds.
 
 \subsection{Boosted Decision Tree}
-\noindent Show the performance of the BDT
+\label{subsection_BDT}
+\noindent Combinatorial backgrounds form the largest part of the background after the standard selection is performed. A Boosted Decision Tree (BDT) was used to remove most of this background. The BDT was trained using simulated $B^\pm$ samples as the signal sample and the region $\SI{5800}{\mega\eV} < m(Dh^\pm) < \SI{7000}{\mega\eV}$ in data as a background sample. The input data was randomly split into equal training and test samples. The full list of input variables used to train the BDT is shown in Appendix \ref{}. After training, the test sample showed that $99.4\%$ of the combinatorial background was removed, but $93\%$ of the signal remained.
 
 \subsection{Background from \texorpdfstring{$D^0\to K^-\pi^+\pi^-\pi^+$}{D->Kpipipi}}
-\noindent Show studies of $K3\pi$ contamination
+\label{subsection_kpipipi}
+\noindent A significant mis-identification background is from real $B^\pm\to Dh^\pm$ candidates, but $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$ and one of the pions are wrongly assigned a kaon hypothesis. This background is potentially dangerous because of the high $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$ branching fraction and its peaking nature in the $Dh^\pm$ invariant mass spectrum.
+
+To investigate this background further, a sample of simulated events was obtained. After accounting the number of events in the simulation samples and their branching fractions, the signal $B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ and background $B^\pm\to(K^\pm\pi^\mp\pi^\pm\pi^\mp)_Dh^\pm$ invariant $D$ mass distributions are shown in Fig. \ref{fig_Dmass_kpipipi}. Most of this background is outside the $D$ mass window, but some of the tail is under the signal. This background may be reduced by using tighter PID requirements, shown in Fig. \ref{fig_yield_kpipipi}. A preliminary cut at $\text{PIDK} = 0$ was chosen, which removes the majority of the background.
+
+\begin{figure}[H] 
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{The $D$ invariant mass from $D\to K^+K^-\pi^+\pi^-$ and $D\to K^\pm\pi^mp\pi^\pm\pi^mp$ from simulated events.}
+    \label{fig_Dmass_kpipipi}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{The yield of signal $D\to K^+K^-\pi^+\pi^-$ and background $D\to K^\pm\pi^mp\pi^\pm\pi^mp$ events as a function of $\text{PIDK}$.}
+    \label{fig_yield_kpipipi}
+  \end{subfigure}
+  \caption{}
+\end{figure}
+
+A similar background from $D\to\pi^+\pi^-\pi^+\pi^-$ was found to be negligible because it requires two pions to be assigned the wrong hypothesis, which is very unlikely, and the $D$ invariant mass will be far outside the mass window.
 
 \subsection{Charmless backgrounds}
-\noindent Show how flight significance cut removes $B\to KKK\pi\pi$ and mention that $B\to KK\pi\pi\pi$ is insignificant
+\label{subsection_charmless}
+\noindent Charmless backgrounds are $B^\pm$ candidates that decay directly into five charged tracks, without a charmed intermediate meson. These candidates will look like a signal in the $B^\pm$ invariant mass spectrum, but will form a continuous background in the $D$ invariant mass spectrum. A cut around the $D$ invariant mass will remove some of this background, but a large fraction will remain under the signal peak.
 
+To estimate the amount of contamination, a separate selection was done without imposing a cut on the $\chi^2$ of the refitted $D$ daughters. This preserves the $D$ invariant mass sideband backgrounds, and a mass window in the lower sideband, $\SI{1770}{\mega\eV} < m(K^+K^-\pi^+\pi^-) < \SI{1820}{\mega\eV}$ was selected. The higher mass sideband was avoided due to contamination from $D\to K^\pm\pi^mp\pi^\pm\pi^\mp$. This mass window, which is of similar size to that of the signal mass window, contains real $B^\pm$, candidates, and the $B^\pm$ invariant mass is shown in Fig. \ref{fig_Bmass_charmless} for $B^\pm\to DK^\pm$ candidates.
+
+\begin{figure}[H] 
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{The $B^\pm$ invariant mass in the $D$ invariant mass lower sideband.}
+    \label{fig_Bmass_charmless}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{The $B^\pm$ invariant mass in the $D$ invariant mass lower sideband, after imposing a flight significance cut.}
+    \label{fig_Bmass_charmless_fdcut}
+  \end{subfigure}
+  \caption{}
+\end{figure}
+
+A simple fit was performed on the spectrum in Fig. \ref{fig_Bmass_charmless}, with a Gaussian signal and an exponential background. The obtained yield was $0000$. The contamination from $B^\pm K^+K^-\pi^+\pi-K^\pm$ is therefore relatively large, compared to the expected signal yield of real $B^\pm\to (K^+K^-\pi+\pi^-)_DK^\pm$ candidates. However, no mass peak was found in the corresponding $B^\pm\to D\pi^\pm$ invariant mass spectrum, and therefore the charmless background $B^\pm\to K^+K^-\pi^+\pi^-\pi^\pm$ is negligible in the $B^\to (K^+K^-\pi^+\pi^-)\pi^\pm$ channel.
+
+Since $D^0$ mesons travel a finite distance before decaying inside the VELO, a quantity called the flight significance, which is the flight distance divided by its error, may be defined. A cut was imposed such that only $B^\pm$ candidates with flight significance greater than $2.0$ are selected. This removes most of the charmless backgrounds, and the remaining background is shown in Fig. \ref{fig_Bmass_charmless_fdcut}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fit to extract CP observables}
 \subsection{Global fit and invariant mass spectra}
-\noindent State the fit procedure for global fit and show results of global fit for Run $2$, including yields
+\label{section_global_fit}
+\noindent A global maximum likelihood fit of all $B^\pm$ candidates was performed to determine the total yields and mass shape parameters in the $Dh^\pm$ invariant mass spectrum. The signal and background parameterization are the same as those in Ref. \ref{}, including which variables are floated in the fit and which are fixed. In addition, all fixed parameters are identical to the those in Ref. \ref{}, and only minor adjustments are needed for the final analysis.
+
+The combinatorial background is parameterized as an exponentially falling background. The signal is parameterized as a sum of a Gaussian $f_\text{G}(m|m_B, \sigma)$ and a modified Gaussian that accounts for the radiate tail and wider resolution of signal events that are poorly reconstructed. The PDF has the form
+
+\begin{equation}
+  f_\text{MG}(m|m_B, \sigma, \alpha_L, \alpha_R, \beta)\propto
+  \begin{cases}
+    \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_L\Delta m^2}\Big), \Delta m = m - m_B < 0 \\
+    \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_R\Delta m^2}\Big), \Delta m = m - m_B > 0 \\
+  \end{cases}.
+\end{equation}
+
+To the left of the $B^\pm$ invariant mass peak are contributions from partially reconstructed backgrounds. These are mainly $B^\pm$ or $B^0$ decays to $D^*h^\pm$, and $D^*\to D\pi$ or $D^*\to D\gamma$, where the pion or photon are not reconstructed. The missing mass leads to peaking to the left of the signal. Furthermore, in the $B^\pm\to DK^\pm$, there is a component of $B^\pm\to D\pi^\pm$ candidates, where the $\pi^\pm$ daughter is wrongly assigned a kaon hypothesis. This is a small component to the right of the signal. Furthermore, this channel also has a component of $B_s\to DK^\pm\pi^\mp$ and the pion is not reconstructed, and a component of partially reconstructed background from $B^\pm$ and $B^0$ candidates where the $\pi^\pm$ daughter is mis-identified as a $K^\pm$. All partially reconstructed background components are fitted with PDF shapes described in Ref. \ref{}.
+
+The final global fits for $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ are shown in Figs. \ref{fig_Bmass_B2DK} and \ref{fig_Bmass_B2Dpi}, respectively. The final yield of $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ candidates are $\SI{0(0)}{}$ and $\SI{0(0)}{}$, respectively.
+
+\begin{figure}[H] 
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{Global mass fit of $B^\pm\to DK^\pm$.}
+    \label{fig_Bmass_B2DK}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{Global mass fit of $B^\pm\to D\pi^\pm$.}
+    \label{fig_Bmass_B2Dpi}
+  \end{subfigure}
+  \caption{}
+\end{figure}
 
 \subsection{Binned CP fit and CP observables}
-\noindent Explain the binned CP fit to extract CP observables
+\noindent After the global fit described in Section \ref{section_global_fit}, $B^\pm$ candidates are split by charge and phase space bins, using the binning scheme described in Section \ref{section_binning_scheme}. A simultaneous maximum likelihood fit is performed for each charge and bin. All mass shape parameters are fixed from the global fit while the yield of signal, total partially reconstructed background and combinatorial background in each bin are floated.
+
+The final fitted parameters are shown in Figs. \ref{fig_xpm_ypm}-\ref{fig_xxi_yxi}. Geometrically, the angle between the points $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$ in Fig. \ref{fig_xpm_ypm} is $2\gamma$, and these six CP observables may be interpreted in terms of $\gamma$, $\delta_B^{DK}$, $r_B^{DK}$, $\delta^{D\pi}$ and $r_B^{D\pi}$. However, this step is only performed at the end to avoid any human bias in the final result.
+
+\begin{figure}[H] 
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{Confidence levels at $68.2\%$ and $95.5\%$ of $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$.}
+    \label{fig_xpm_ypm}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+  \caption{Confidence levels at $68.2\%$ and $95.5\%$ of $(x_\xi^{D\pi}, y_\xi^{D\pi})$.}
+    \label{fig_xxi_yxi}
+  \end{subfigure}
+\end{figure}
 
 \subsection{Validation of fit procedure with toy studies}
+\noindent To ensure that the fit procedures are robust, for both the global and CP fit $1000$ toy datasets are generated with the fitted parameters. Each toy datasets is then run through the same fitting procecure and the pull distibutions of each floated variable is studied closely. It was found that no CP observables were biased or had any understimated errors. Two nuisance parameters in the global fit had slightly underestimated errors which are easily corrected for.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{External strong phase input from BESIII}
-\noindent Describe how to extract strong phases at a charm factory and show some initial plots of single tag yields and double tag yields
+\noindent Analysis of the BESIII data consists of $e^+e^-$ collisions at the $\psi(3770)$ resonance. In addition, there exists inclusive simulated samples of each category of events. The relevant category for this analysis is $D^0\bar{D^0}$ events, which has $21.8$ times more simulated events relative to data. Simulations of exclusive processes are generated when needed.
+
+The most important aspects of this analysis is reconstructing single and double tagged event yields. Peaking backgrounds must be accounted for using the inclusive simulation samples. Finally, the yields are inputted into a maximum likelihood fit using Eqs. \eqref{eq_Mi}-\eqref{eq_Mij} to obtain $c_i$ and $s_i$.
+
+Since an $e^+e^-$ collider is a very clean environment, charged and neutral particles mostly follow the same reconstruction strategy, described in Ref. \ref{}. Since the beams are symmetric, each $D$ meson must have energy $E_\text{beam}$. When the daughters of a $D$ meson is reconstructed, the energy difference $\Delta E$ and beam-constrained mass $M_\text{BC}$ may be defined as
+
+\begin{equation*}
+  \Delta E = \sum_i E_i - E_\text{beam}, \quad M_\text{BC} = \sqrt{E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2}.
+\end{equation*}
+
+For a perfectly reconstructed $D$ meson, $\Delta E = 0$. However, due to detector resolution it is a peak of finite width. In addition, for tag modes with photon showers, the $\Delta E$ distribution has a left tail due to energy leakage through the calorimeter. The beam-constrained mass can be interpreted as the $D$ invariant mass, but using the well measured beam energy to improve the resolution.
+
+\subsection{\texorpdfstring{$K_S^0$}{KS0} veto}
+\noindent The main peaking background in this analysis is $D\to K_S^0K^+K^-$, where $K_S^0\to\pi^+\pi^-$. It has the same experimental signature as $D\to K^+K^-\pi^+\pi^-$ and therefore forms a signal peak in the $M_\text{BC}$ distribution. Most of this background is removed with a flight significance cut at $2.0$. The remaining background is from $K_S^0K^+K^-$ candidates where the $K_S^0$ decays close to the primary vertex, making it impossible to distinguish from $D\to K^+K^-\pi^+\pi^-$. This remaining background is therefore removed by imposing a veto on the $\pi^+\pi^-$ invariant mass. A sample of simulated $D\to K_S^0K^+K^-$ events was generated, but reconstructed as $D\to K^+K^-\pi^+\pi^-$ and the $\pi^+\pi^-$ invariant mass was studied. It was found that an asymmetric veto of $\SI{477}{\mega\eV} < m_{K_S^0} < \SI{507}{\mega\eV}$ was more efficient in removing this peaking background. After the veto, a negligible amount of the peaking background remained.
+
+\subsection{Single tag yield}
+\noindent The single tag yield is obtained by reconstructing events where one of the $D$ mesons decay into a tag mode, while the other $D$ meson is not reconstructed. A mode-dependent cut on $\Delta E$ is chosen by fitting a double Gaussian for the signal peak and a second order polynomial for the background in the $\Delta E$ distribution. A cut around $\pm 3\sigma$ is performed to remove combinatorial background. For modes with photon showers, the left cut is extended to $-4\sigma$.
+
+The single tag yield is then obtained by fitting the $M_\text{BC}$ distribution. The continuous combinatorial background is modelled with an Argus shape. The signal shape is taken from a simulated sample of the signal, convolved with a Gaussian to account for detector resolution. Peaking backgrounds, if present, are accounted for with Gaussian shapes, with shape and yield fixed from the inclusive MC samples. An example of such a fit is shown in Fig. \ref{fig_styield}.
+
+\subsection{Double tag yield}
+\noindent The double tagged yield is obtained by reconstructing both $D$ mesons. The same cuts on $\Delta E$ used for single tagged events are applied, and the beam constrained mass for both $D$ mesons are plotted in a $2$D scatter plot, shown in Fig. \ref{fig_dtyield}. Since the yields are expected to be too low for a maximum likelihood fit, a sideband subtraction technique is employed instead.
+
+\begin{figure}[H] 
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{Fit of single tagged $M_\text{BC}$ distribution to obtain single tag yields.}
+    \label{fig_styield}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+  \caption{Background subtraction technique of double tagged $M_\text{BC}$ distributions to obtain double tag yields}
+    \label{fig_dtyield}
+  \end{subfigure}
+\end{figure}
+
+The $M_\text{BC}$ region in Fig. \ref{fig_dtyield} is split into $5$ regions. Region $S$ is the signal region, while $A$ and $B$ are events where one of the $D$ mesons are correctly reconstructed. Region $C$ are real events but daughter tracks between the $D$ mesons have been swapped. Finally, region $D$ contains purely combinatorial background. The total background is estimated using
+
+\begin{equation*}
+  B = P + \frac{a_S}{a_D}Y_D + \sum_{i = A, B, C}\frac{a_S}{a_i}\Big(Y_i - \frac{a_i}{A_D}Y_D\Big),
+\end{equation*}
+where $P$ is the peaking background found from inclusive MC, $Y_i$ is the yield in region $i$ and $a_i$ is the corresponding area of the region.
+
+Since the current dataset is insufficient for extracting $c_i$ and $s_i$, it is more instructive to compare the double tag yields with the prediction from the LHCb amplitude model. In Fig. \ref{fig_flavour_yield}, $D\to K^+K^-\pi^+\pi^-$ the yield of events tagged with the flavour tag $D\to K^\pm\pi^\mp$ are shown (data points), with the amplitude model prediction (solid line). The events have been binned using a $2\times 4$ binning scheme as described in Section \ref{section_binning_scheme}. In Fig. \ref{fig_cp_yield}, an equivalent plot for the $D\to K^+K^-\pi^+\pi^-$ events, tagged with a CP even tag mode $D\to K^+K^-$ and a CP odd tag mode $K_S^0\pi^0$, without binning. Overall, the data looks consistent with the model prediction.
+
+\begin{figure}[H] 
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+    \caption{Binned double tag yield of $K^+K^-\pi^+\pi^-$ versus $K^\pm\pi^\mp$ events.}
+    \label{fig_flavour_yield}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=1\textwidth]{example-image-a}
+  \caption{Inclusive double tag yield of $K^+K^-\pi^+\pi^-$ versus $K^+K^-$ and $K_S^0\pi^0$ events.}
+    \label{fig_cp_yield}
+  \end{subfigure}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion of future work}
-\noindent Discuss the plan further
+\noindent Discuss the future plans with Guy first!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                          
