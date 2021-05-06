@@ -55,7 +55,7 @@ Sensitivity to $\gamma$ can be achieved through interference between the $b\to c
     \centering
     \begin{fmffile}{fgraph/fgraph_BtoDK1}
       \setlength{\unitlength}{0.4cm}
-      \begin{fmfgraph*}(6,6)
+      \begin{fmfgraph*}(9,6)
         \fmfstraight
         \fmfleft{i1,B,i2,t1,t2,t3,t9,t10}
         \fmfright{o1,D,o2,t4,t5,o3,K,o4}
@@ -84,7 +84,7 @@ Sensitivity to $\gamma$ can be achieved through interference between the $b\to c
     \centering
     \begin{fmffile}{fgraph/fgraph_BtoDK2}
       \setlength{\unitlength}{0.4cm}
-      \begin{fmfgraph*}(6,6)
+      \begin{fmfgraph*}(9,6)
         \fmfstraight
         \fmfleft{i1,t1,t2,B,t9,t10,i2}
         \fmfright{o1,K,o2,t4,t5,o3,D,o4}
@@ -243,13 +243,13 @@ The mean and standard deviation of the pull distributions of $x_\pm^{DK}$, $y_\p
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/BinningSchemePlot.png}
     \caption{Binning scheme definition for $2\times 8$ bins}
     \label{fig_binning_scheme}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/GammaDistribution8BinsVariableWidth.png}
     \caption{Distribution of $\gamma$ from toy study}
     \label{fig_gamma_pull_study}
   \end{subfigure}
@@ -294,20 +294,20 @@ More specialized selection, discussed in Sections \ref{subsection_BDT}-\ref{subs
 \label{subsection_kpipipi}
 \noindent A significant mis-identification background is from real $B^\pm\to Dh^\pm$ candidates, but $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$ and one of the pions are wrongly assigned a kaon hypothesis. This background is potentially dangerous because of the high $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$ branching fraction and its peaking nature in the $Dh^\pm$ invariant mass spectrum.
 
-To investigate this background further, a sample of simulated events was obtained. After accounting the number of events in the simulation samples and their branching fractions, the signal $B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ and background $B^\pm\to(K^\pm\pi^\mp\pi^\pm\pi^\mp)_Dh^\pm$ invariant $D$ mass distributions are shown in Fig. \ref{fig_Dmass_kpipipi}. Most of this background is outside the $D$ mass window, but some of the tail is under the signal. This background may be reduced by using tighter PID requirements, shown in Fig. \ref{fig_yield_kpipipi}. A preliminary cut at $\text{PIDK} = 0$ was chosen, which removes the majority of the background.
+To investigate this background further, a sample of simulated events was obtained. After accounting the number of events in the simulation samples and their branching fractions, the signal $B^\pm\to(K^+K^-\pi^+\pi^-)_DK^\pm$ and background $B^\pm\to(K^\pm\pi^\mp\pi^\pm\pi^\mp)_DK^\pm$ invariant $D$ mass distributions are shown in Fig. \ref{fig_Dmass_kpipipi}. Most of this background is outside the $D$ mass window, but some of the tail is under the signal. The simulation indicate that $7.2\%$ of the signal peak is from $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$. This background may be reduced by using tighter PID requirements, shown in Fig. \ref{fig_yield_kpipipi}. A preliminary cut at $\text{PIDK} = 0$ was chosen, which reduces this fraction to $1.8\%$ while keeping $93\%$ of signal candidates.
 
 \begin{figure}[H] 
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
-    \caption{The $D$ invariant mass from $D\to K^+K^-\pi^+\pi^-$ and $D\to K^\pm\pi^mp\pi^\pm\pi^mp$ from simulated events.}
+    \includegraphics[width=1\textwidth]{Plots/B2DK_Dmass_Background.png}
+    \caption{The $D$ invariant mass from $D\to K^+K^-\pi^+\pi^-$ and $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$ from simulated events.}
     \label{fig_Dmass_kpipipi}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
-    \caption{The yield of signal $D\to K^+K^-\pi^+\pi^-$ and background $D\to K^\pm\pi^mp\pi^\pm\pi^mp$ events as a function of $\text{PIDK}$.}
+    \includegraphics[width=1\textwidth]{Plots/YieldVSPIDK.png}
+    \caption{The yield of $D\to K^+K^-\pi^+\pi^-$ and $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$ events as a function of $\text{PIDK}$.}
     \label{fig_yield_kpipipi}
   \end{subfigure}
   \caption{}
@@ -325,22 +325,22 @@ To estimate the amount of contamination, a separate selection was done without i
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/B2DKLower_Charmless.png}
     \caption{The $B^\pm$ invariant mass in the $D$ invariant mass lower sideband.}
     \label{fig_Bmass_charmless}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
-    \caption{The $B^\pm$ invariant mass in the $D$ invariant mass lower sideband, after imposing a flight significance cut.}
+    \includegraphics[width=1\textwidth]{Plots/B2DKLowerFDCut_Charmless.png}
+    \caption{The $B^\pm$ invariant mass in the $D$ invariant mass lower sideband with a flight significance cut.}
     \label{fig_Bmass_charmless_fdcut}
   \end{subfigure}
   \caption{}
 \end{figure}
 
-A simple fit was performed on the spectrum in Fig. \ref{fig_Bmass_charmless}, with a Gaussian signal and an exponential background. The obtained yield was $0000$. The contamination from $B^\pm K^+K^-\pi^+\pi-K^\pm$ is therefore relatively large, compared to the expected signal yield of real $B^\pm\to (K^+K^-\pi+\pi^-)_DK^\pm$ candidates. However, no mass peak was found in the corresponding $B^\pm\to D\pi^\pm$ invariant mass spectrum, and therefore the charmless background $B^\pm\to K^+K^-\pi^+\pi^-\pi^\pm$ is negligible in the $B^\to (K^+K^-\pi^+\pi^-)\pi^\pm$ channel.
+A simple fit was performed on the spectrum in Fig. \ref{fig_Bmass_charmless}, with a Gaussian signal and an exponential background. The obtained yield was $\SI{2605(57)}{}$. The contamination from $B^\pm K^+K^-\pi^+\pi-K^\pm$ is therefore relatively large, compared to the expected signal yield of real $B^\pm\to (K^+K^-\pi+\pi^-)_DK^\pm$ candidates. However, no mass peak was found in the corresponding $B^\pm\to D\pi^\pm$ invariant mass spectrum, and therefore the charmless background $B^\pm\to K^+K^-\pi^+\pi^-\pi^\pm$ is negligible in the $B^\to (K^+K^-\pi^+\pi^-)\pi^\pm$ channel.
 
-Since $D^0$ mesons travel a finite distance before decaying inside the VELO, a quantity called the flight significance, which is the flight distance divided by its error, may be defined. A cut was imposed such that only $B^\pm$ candidates with flight significance greater than $2.0$ are selected. This removes most of the charmless backgrounds, and the remaining background is shown in Fig. \ref{fig_Bmass_charmless_fdcut}.
+Since $D^0$ mesons travel a finite distance before decaying inside the VELO, a quantity called the flight significance, which is the flight distance divided by its error, may be defined. A preliminary cut was imposed such that only $B^\pm$ candidates with flight significance greater than $2.0$ are selected. This removes most of the charmless backgrounds, and the remaining background is shown in Fig. \ref{fig_Bmass_charmless_fdcut}. The yield after a flight significance cut is $\SI{110(19)}{}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fit to extract CP observables}
 \subsection{Global fit and invariant mass spectra}
