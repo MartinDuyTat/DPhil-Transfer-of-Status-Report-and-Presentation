@@ -1,5 +1,6 @@
 #!/bin/bash
 f=TransferOfStatusReport.tex
+g=TransferOfStatusReport.aux
 if pdflatex $f
 then
   cd fgraph
@@ -8,5 +9,6 @@ then
     mpost ${MP}
   done
   cd ..
+  bibtex $g
   pdflatex $f
 fi

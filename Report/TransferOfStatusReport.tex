@@ -44,7 +44,7 @@
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-\noindent In the Standard Model, CP-violation can occur if the CKM matrix has a non-trivial weak phase. This is studied by measuring the lengths and angles of the Unitary Triangle of the CKM matrix. In particular, the angle $\gamma = \arg(-V_{ud}V^*{ub}/V_{cd}V^*{cb})$ is the only angle that can be measured at tree level, with negligible theoretical uncertainties. A precise determination of $\gamma$ is therefore a good Standard Model benchmark which can be compared with indirect determinations from other CKM observables that are sensitive to new physics.
+\noindent In the Standard Model, CP-violation can occur if the CKM matrix has a non-trivial weak phase\cite{cite_CKM}. This is studied by measuring the lengths and angles of the Unitary Triangle of the CKM matrix. In particular, the angle $\gamma = \arg(-V_{ud}V^*{ub}/V_{cd}V^*{cb})$ is the only angle that can be measured at tree level, with negligible theoretical uncertainties. A precise determination of $\gamma$ is therefore a good Standard Model benchmark which can be compared with indirect determinations from other CKM observables that are sensitive to new physics.
 
 Sensitivity to $\gamma$ can be achieved through interference between the $b\to c\bar{u}s$ and $b\to u\bar{c}s$ transitions. A powerful decay mode is $B^\pm\to DK^\pm$, where $D$, a superposition of $D^0$ and $\bar{D^0}$, subsequently decays to a self-conjugate state. This is illustrated in Fig. \ref{fig_feynman_B2DK}. On the left, the colour favoured decay $B^-\to D^0K^-$ is shown, while on the right is the decay colour suppressed $B^-\to\bar{D^0}K^-$. Interference is observed when $D^0$ and $\bar{D^0}$ decays to a common final state.
 
@@ -113,11 +113,11 @@ Sensitivity to $\gamma$ can be achieved through interference between the $b\to c
   \label{fig_feynman_B2DK}
 \end{figure}
 
-A wide range of subsequent $D$ decays has been studied. Most recently, the measurement $\gamma = (68.7^{+5.2}_{-5.1})^\circ$ from an analysis of the decay modes $D\to K_S^0\pi^+\pi^-$ and $D\to K_S^0K^+K^-$ was obtained, which is the single most precise measurement of $\gamma$. In this project, the decay $B^\pm\to DK^\pm$, where $D\to K^+K^-\pi^+\pi^-$, is considered. An initial study showed that a precision of $\SI{14}{\degree}$ is achievable with a sample of $1000$ $B^\pm\to DK^\pm$ candidates. From similar decay channels, it is estimated that $2000$ candidates can be reconstructed from the combined Run $1$+$2$ LHCb dataset.
+A wide range of subsequent $D$ decays has been studied. Most recently, the measurement $\gamma = (68.7^{+5.2}_{-5.1})^\circ$ from an analysis of the decay modes $D\to K_S^0\pi^+\pi^-$ and $D\to K_S^0K^+K^-$ was obtained\cite{cite_LHCbGGSZKSpipi}, which is the single most precise measurement of $\gamma$. In this project, the decay $B^\pm\to DK^\pm$, where $D\to K^+K^-\pi^+\pi^-$, is considered. An initial study\cite{cite_RademackerWilkinson} showed that a precision of $\SI{14}{\degree}$ is achievable with a sample of $1000$ $B^\pm\to DK^\pm$ candidates. From similar decay channels, it is estimated that $2000$ candidates can be reconstructed from the combined Run $1$+$2$ LHCb dataset.
 
-A significant challenge with this analysis is that the $D\to K^+K^-\pi^+\pi^-$ decay is a multi-body decay, so the strong phase difference between the $D^0$ and $\bar{D^0}$ decays varies non-trivially across phase space. Moreover, with four particles in the final state phase space becomes five-dimensional. To predict this strong phase difference, a decay model, such as one developed by LHCb, may be used. However, such a model introduces systematic uncertainties due to modelling.
+A significant challenge with this analysis is that the $D\to K^+K^-\pi^+\pi^-$ decay is a multi-body decay, so the strong phase difference between the $D^0$ and $\bar{D^0}$ decays varies non-trivially across phase space. Moreover, with four particles in the final state phase space becomes five-dimensional. To predict this strong phase difference, an amplitude model of the decay may be used. However, such a model introduces systematic uncertainties due to modelling.
 
-In this analysis, a model-independent approach is chosen, in which strong phases are determined at a charm factory, BESIII, where, quantum correlated $D^0\bar{D^0}$ pairs are produced at the $\psi(3770)$ resonance. The amplitude-averaged strong phases are measured in bins of the $D\to K^+K^-\pi^+\pi^-$ phase space. The choice of binning scheme may enhace the sensitivity to $\gamma$. However, a poor choice of binning scheme may only decrease the statistical sensitivity, but not bias the result. With a model-independent approach, one therefore eliminates the systematic uncertainty due to modelling.
+In this analysis, a model-independent approach is chosen, in which strong phases are determined at a charm factory, BESIII, where, quantum correlated $D^0\bar{D^0}$ pairs are produced at the $\psi(3770)$ resonance. The amplitude-averaged strong phases are measured in bins of the $D\to K^+K^-\pi^+\pi^-$ phase space. A good choice of binning scheme may enhace the sensitivity to $\gamma$. A recently developed amplitude model\cite{cite_AmplitudeModel} for $D\to K^+K^-\pi+\pi^-$, which will be referred to as the LHCb amplitude model, will be used to develop the binning scheme. It is used to understand the strong phase variations across phase space, but the final result will be independent of the model. A poor choice of binning scheme may only decrease the statistical sensitivity, but not bias the result. With a model-independent approach, one therefore eliminates the systematic uncertainty due to modelling.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Formalism}
@@ -202,21 +202,24 @@ Once all single and double tag yields have been extracted, a maximum likelihood 
 
 Currently, BESII has collected $\SI{2.932}{\femto\per\barn}$ of data at the $\psi(3770)$ resonance during $2010$-$2011$, which is unsufficient for doing a maximum likelihood fit. However, a significant increase in data is expected from $2022$, allowing for a precise determination of $c_i$ and $s_i$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{LHCb detector}
-\noindent The LHCb is a single arm forward spectrometer designed to study beauty and charm hadrons in $pp$ collisions at the LHC. The main components important for this analysis are the high precision tracking system and the two Ring Imaging Cherencov counters (RICH1 and RICH2).
+\section{Detectors}
+\subsection{LHCb}
+\noindent The LHCb\cite{cite_LHCb} is a single arm forward spectrometer designed to study beauty and charm hadrons in $pp$ collisions at the LHC. The main components important for this analysis are the high precision tracking system and the two Ring Imaging Cherencov counters (RICH1 and RICH2).
 
 The tracking system includes the Vertex Locator (VELO). The VELO consists of silicon strip modules close to the interaction point, which provides high precision tracking and identification of displaced secondary vertices that are important for beauty and charm physics. A dipole magnet with bending power of about $\SI{4}{\tesla\meter}$ together with three tracking stations of silicon strip detectors and straw drift tubes placed downstream provides a measurement of the momentum of charged particles with an uncertainty of $0.5\%$ at low momentum at $1.0\%$ at $\SI{200}{\giga\eV}$. The impact parameter is measured with a resolution of $(15 + 29/p_T)\si{\micro\meter}$, where $p_T$ is the transverse momentum.
 
 The two RICH detectors, together with the tracking system and the calorimeter system, separates kaons from pions. The upstream RICH1 detector covers the lower momentum range up to $\SI{60}{\giga\eV}$ while the downstream RICH2 covers the higher momentum range from $\SI{15}{\giga\eV}$ to $\SI{100}{\giga\eV}$.
 
 To model the kinematic distributions of signal and background components and determine selection efficiencies, simulations of $pp$ collisions are generated in \pythia. Decays are described by \evtgen and final state radiation is generated witih \photos. In addition, models of decay amplitudes are incorporated using the AmpGen framework.
+\subsection{BESIII}
+\noindent BESIII\cite{cite_BESIII} is a general purpose solenoidal detector. The main parts relevant to this analysis is the main drift chamber filled with Helium gas for measuring the momentum and $\dv{E}{x}$ of charged particles, a plastic scintillator based time of flight system for ID of charged particles and an electromagnetic calorimeter to measure neutral shower energies.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Binning scheme}
 \label{section_binning_scheme}
 \noindent In a three-body decay, such as $D\to K_S^0\pi^+\pi^-$, the two-dimensional phase space may be visualized in a two-dimensional Dalitz plot. In an analysis analogous to $D\to K^+K^-\pi^+\pi^-$, the Dalitz space was separated into bins of similar strong phase, such that the amplitude-averaged strong phases $c_i$ and $s_i$ were not diluted due to binning. In addition, the Dalitz plot was split symmetrically into bins with positively and negatively indexed bins, such that most Cabbibo favoured resonances and doubly suppressed Cabbibo resonances were on opposite sides of each other. Such a clever choice of bins will therefore enhance the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate}, and thus enhance the sensitivity to CP-violation effects.
 
-A similar choice of binning must be determined for the four-body decay mode $D\to K^+K^-\pi^+\pi^-$. While similar in many ways, this phase space is five-dimensional and cannot easily be visualized. Instead, an amplitude model is used to predict the decay amplitude and strong phase difference. The model, implemented using the AmpGen framework, takes in the momenta of the $D$ daughter particles, and the output is used to calculate the $D\to K^+K^-\pi^+\pi^-$ decay amplitude $\mathcal{A}(D)$. One can then define
+A similar choice of binning must be determined for the four-body decay mode $D\to K^+K^-\pi^+\pi^-$. While similar in many ways, this phase space is five-dimensional and cannot easily be visualized. Instead, an amplitude model is used to predict the decay amplitude and strong phase difference. The model, implemented using the AmpGen framework\cite{cite_AmpGen}, takes in the momenta of the $D$ daughter particles, and the output is used to calculate the $D\to K^+K^-\pi^+\pi^-$ decay amplitude $\mathcal{A}(D)$. One can then define
 
 \begin{equation}
   \frac{\mathcal{A}(D^0)}{\mathcal{A}(\bar{D^0})}\equiv r_De^{i\Delta\delta_D},
@@ -280,7 +283,7 @@ The fitted values of $\gamma$ from all the toy experiments are shown in Fig. \re
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\texorpdfstring{$B^\pm$}{B} candidate selection}
 \subsection{Signal candidate requirements}
-\noindent The $B^\pm\to Dh^\pm$ candidates, with $h^\pm = \pi^\pm, K^\pm$ and $D^\to K^+K^-\pi^+\pi^-$, are reconstructed from five charged tracks. The standard track and trigger requirements mainly follows that of Ref. \ref{}. To ensure that there is a real $D$ meson in the selection, the four charged tracks from $D$ are required to be inside a mass window of $\SI{25}{\mega\eV}$ of the PDG mass. Then the tracks are refitted with their invariant mass constrained to the PDG value and its momentum is required to point back to the primary vertex. A cut on the $\chi^2$ at $\ln(\chi^2) < 3$ will remove most of the sideband background in the $D$ invariant mass.
+\noindent The $B^\pm\to Dh^\pm$ candidates, with $h^\pm = \pi^\pm, K^\pm$ and $D^\to K^+K^-\pi^+\pi^-$, are reconstructed from five charged tracks. The standard track and trigger requirements mainly follows that of Ref. \cite{cite_LHCbGGSZKSpipi}. To ensure that there is a real $D$ meson in the selection, the four charged tracks from $D$ are required to be inside a mass window of $\SI{25}{\mega\eV}$ of the PDG mass. Then the tracks are refitted with their invariant mass constrained to the PDG value and its momentum is required to point back to the primary vertex. A cut on the $\chi^2$ at $\ln(\chi^2) < 3$ will remove most of the sideband background in the $D$ invariant mass.
 
 A mutually exclusive Particle Identification (PID) cut is imposed to separate the $B^\pm\to D\pi^\pm$ and $B^\pm\to DK^\pm$ candidates. In addition the $K^\pm$ daughter from $D$ and the direct $h^\pm$ daughter from $B^\pm$ are required to have momentum $p < \SI{100}{\giga\eV}$ to be inside the optimal range for the RICH to distinuish pions and kaons.
 
@@ -288,7 +291,7 @@ More specialized selection, discussed in Sections \ref{subsection_BDT}-\ref{subs
 
 \subsection{Boosted Decision Tree}
 \label{subsection_BDT}
-\noindent Combinatorial backgrounds form the largest part of the background after the standard selection is performed. A Boosted Decision Tree (BDT) was used to remove most of this background. The BDT was trained using simulated $B^\pm$ samples as the signal sample and the region $\SI{5800}{\mega\eV} < m(Dh^\pm) < \SI{7000}{\mega\eV}$ in data as a background sample. The input data was randomly split into equal training and test samples. The full list of input variables used to train the BDT is shown in Appendix \ref{}. After training, the test sample showed that $99.4\%$ of the combinatorial background was removed, but $93\%$ of the signal remained.
+\noindent Combinatorial backgrounds form the largest part of the background after the standard selection is performed. A Boosted Decision Tree (BDT) was used to remove most of this background. The BDT was trained using simulated $B^\pm$ samples as the signal sample and the region $\SI{5800}{\mega\eV} < m(Dh^\pm) < \SI{7000}{\mega\eV}$ in data as a background sample. The training variables are similar to those in Ref. \cite{cite_LHCbGGSZKSpipi}. The input data was randomly split into equal training and test samples. After training, the test sample showed that $99.4\%$ of the combinatorial background was removed, but $93\%$ of the signal remained.
 
 \subsection{Background from \texorpdfstring{$D^0\to K^-\pi^+\pi^-\pi^+$}{D->Kpipipi}}
 \label{subsection_kpipipi}
@@ -345,7 +348,7 @@ Since $D^0$ mesons travel a finite distance before decaying inside the VELO, a q
 \section{Fit to extract CP observables}
 \subsection{Global fit and invariant mass spectra}
 \label{section_global_fit}
-\noindent A global maximum likelihood fit of all $B^\pm$ candidates was performed to determine the total yields and mass shape parameters in the $Dh^\pm$ invariant mass spectrum. The signal and background parameterization are the same as those in Ref. \ref{}, including which variables are floated in the fit and which are fixed. In addition, all fixed parameters are identical to the those in Ref. \ref{}, and only minor adjustments are needed for the final analysis.
+\noindent A global maximum likelihood fit of all $B^\pm$ candidates was performed to determine the total yields and mass shape parameters in the $Dh^\pm$ invariant mass spectrum. The signal and background parameterization are the same as those in Ref. \cite{cite_LHCbGGSZKSpipi}, including which variables are floated in the fit and which are fixed. In addition, all fixed parameters are identical to the those in Ref. \cite{cite_LHCbGGSZKSpipi}, and only minor adjustments are needed for the final analysis.
 
 The combinatorial background is parameterized as an exponentially falling background. The signal is parameterized as a sum of a Gaussian $f_\text{G}(m|m_B, \sigma)$ and a modified Gaussian that accounts for the radiate tail and wider resolution of signal events that are poorly reconstructed. The PDF has the form
 
@@ -357,25 +360,15 @@ The combinatorial background is parameterized as an exponentially falling backgr
   \end{cases}.
 \end{equation}
 
-To the left of the $B^\pm$ invariant mass peak are contributions from partially reconstructed backgrounds. These are mainly $B^\pm$ or $B^0$ decays to $D^*h^\pm$, and $D^*\to D\pi$ or $D^*\to D\gamma$, where the pion or photon are not reconstructed. The missing mass leads to peaking to the left of the signal. Furthermore, in the $B^\pm\to DK^\pm$, there is a component of $B^\pm\to D\pi^\pm$ candidates, where the $\pi^\pm$ daughter is wrongly assigned a kaon hypothesis. This is a small component to the right of the signal. Furthermore, this channel also has a component of $B_s\to DK^\pm\pi^\mp$ and the pion is not reconstructed, and a component of partially reconstructed background from $B^\pm$ and $B^0$ candidates where the $\pi^\pm$ daughter is mis-identified as a $K^\pm$. All partially reconstructed background components are fitted with PDF shapes described in Ref. \ref{}.
+To the left of the $B^\pm$ invariant mass peak are contributions from partially reconstructed backgrounds. These are mainly $B^\pm$ or $B^0$ decays to $D^*h^\pm$, and $D^*\to D\pi$ or $D^*\to D\gamma$, where the pion or photon are not reconstructed. The missing mass leads to peaking to the left of the signal. Furthermore, in the $B^\pm\to DK^\pm$, there is a component of $B^\pm\to D\pi^\pm$ candidates, where the $\pi^\pm$ daughter is wrongly assigned a kaon hypothesis. This is a small component to the right of the signal. Furthermore, this channel also has a component of $B_s\to DK^\pm\pi^\mp$ and the pion is not reconstructed, and a component of partially reconstructed background from $B^\pm$ and $B^0$ candidates where the $\pi^\pm$ daughter is mis-identified as a $K^\pm$. All partially reconstructed background components are fitted with PDF shapes described in Ref. \cite{cite_LHCbGGSZKSpipi}.
 
-The final global fits for $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ are shown in Figs. \ref{fig_Bmass_B2DK} and \ref{fig_Bmass_B2Dpi}, respectively. The final yield of $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ candidates are $\SI{0(0)}{}$ and $\SI{0(0)}{}$, respectively.
+The final global fits for $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ are shown in Fig. \ref{fig_Bmass_Global}. The final yield of $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ candidates are $\SI{2290(59)}{}$ and $\SI{33113(211)}{}$, respectively.
 
 \begin{figure}[H] 
   \centering
-  \begin{subfigure}{0.5\textwidth}
-    \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
-    \caption{Global mass fit of $B^\pm\to DK^\pm$.}
-    \label{fig_Bmass_B2DK}
-  \end{subfigure}%
-  \begin{subfigure}{0.5\textwidth}
-    \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
-    \caption{Global mass fit of $B^\pm\to D\pi^\pm$.}
-    \label{fig_Bmass_B2Dpi}
-  \end{subfigure}
-  \caption{}
+  \includegraphics[width=1\textwidth]{Plots/GlobalFit.png}
+  \caption{Global mass fit of $B^\pm\to DK^\pm$ (left) and $B^\pm\to D\pi^\pm$ (right).}
+  \label{fig_Bmass_Global}
 \end{figure}
 
 \subsection{Binned CP fit and CP observables}
@@ -387,13 +380,13 @@ The final fitted parameters are shown in Figs. \ref{fig_xpm_ypm}-\ref{fig_xxi_yx
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/CPContours.png}
     \caption{Confidence levels at $68.2\%$ and $95.5\%$ of $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$.}
     \label{fig_xpm_ypm}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/CPXiContours.png}
   \caption{Confidence levels at $68.2\%$ and $95.5\%$ of $(x_\xi^{D\pi}, y_\xi^{D\pi})$.}
     \label{fig_xxi_yxi}
   \end{subfigure}
@@ -408,7 +401,7 @@ The final fitted parameters are shown in Figs. \ref{fig_xpm_ypm}-\ref{fig_xxi_yx
 
 The most important aspects of this analysis is reconstructing single and double tagged event yields. Peaking backgrounds must be accounted for using the inclusive simulation samples. Finally, the yields are inputted into a maximum likelihood fit using Eqs. \eqref{eq_Mi}-\eqref{eq_Mij} to obtain $c_i$ and $s_i$.
 
-Since an $e^+e^-$ collider is a very clean environment, charged and neutral particles mostly follow the same reconstruction strategy, described in Ref. \ref{}. Since the beams are symmetric, each $D$ meson must have energy $E_\text{beam}$. When the daughters of a $D$ meson is reconstructed, the energy difference $\Delta E$ and beam-constrained mass $M_\text{BC}$ may be defined as
+Since an $e^+e^-$ collider is a very clean environment, charged and neutral particles mostly follow the same reconstruction strategy, described in Ref. \cite{cite_KSKKAnalysis}. Since the beams are symmetric, each $D$ meson must have energy $E_\text{beam}$. When the daughters of a $D$ meson is reconstructed, the energy difference $\Delta E$ and beam-constrained mass $M_\text{BC}$ may be defined as
 
 \begin{equation*}
   \Delta E = \sum_i E_i - E_\text{beam}, \quad M_\text{BC} = \sqrt{E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2}.
@@ -431,42 +424,45 @@ The single tag yield is then obtained by fitting the $M_\text{BC}$ distribution.
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/KKpipiSingleTagMBCPlot.png}
     \caption{Fit of single tagged $M_\text{BC}$ distribution to obtain single tag yields.}
     \label{fig_styield}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/KpiDoubleTagYield.png}
   \caption{Background subtraction technique of double tagged $M_\text{BC}$ distributions to obtain double tag yields}
     \label{fig_dtyield}
   \end{subfigure}
 \end{figure}
 
-The $M_\text{BC}$ region in Fig. \ref{fig_dtyield} is split into $5$ regions. Region $S$ is the signal region, while $A$ and $B$ are events where one of the $D$ mesons are correctly reconstructed. Region $C$ are real events but daughter tracks between the $D$ mesons have been swapped. Finally, region $D$ contains purely combinatorial background. The total background is estimated using
+In Fig. \ref{fig_dtyield}, the data for double tagged $D\to K^+K^-\pi^+\pi^-$ versus $D\to K^\pm\pi^\mp$ events are shown. The $M_\text{BC}$ region is split into $5$ regions. Region $S$ is the signal region, while $A$ and $B$ are events where one of the $D$ mesons are correctly reconstructed. Region $C$ are real events but daughter tracks between the $D$ mesons have been swapped. Finally, region $D$ contains purely combinatorial background. The total background is estimated using
 
 \begin{equation*}
   B = P + \frac{a_S}{a_D}Y_D + \sum_{i = A, B, C}\frac{a_S}{a_i}\Big(Y_i - \frac{a_i}{A_D}Y_D\Big),
 \end{equation*}
 where $P$ is the peaking background found from inclusive MC, $Y_i$ is the yield in region $i$ and $a_i$ is the corresponding area of the region.
 
-Since the current dataset is insufficient for extracting $c_i$ and $s_i$, it is more instructive to compare the double tag yields with the prediction from the LHCb amplitude model. In Fig. \ref{fig_flavour_yield}, $D\to K^+K^-\pi^+\pi^-$ the yield of events tagged with the flavour tag $D\to K^\pm\pi^\mp$ are shown (data points), with the amplitude model prediction (solid line). The events have been binned using a $2\times 4$ binning scheme as described in Section \ref{section_binning_scheme}. In Fig. \ref{fig_cp_yield}, an equivalent plot for the $D\to K^+K^-\pi^+\pi^-$ events, tagged with a CP even tag mode $D\to K^+K^-$ and a CP odd tag mode $K_S^0\pi^0$, without binning. Overall, the data looks consistent with the model prediction.
+Since the current dataset is insufficient for extracting $c_i$ and $s_i$, it is more instructive to compare the double tag yields with the prediction from the LHCb amplitude model. In Fig. \ref{fig_flavour_yield}, $D\to K^+K^-\pi^+\pi^-$ the yield of events tagged with the flavour tag $D\to K^\pm\pi^\mp$ are shown (data points), with the amplitude model prediction (solid line). The events have been binned using a $2\times 4$ binning scheme as described in Section \ref{section_binning_scheme}. In Fig. \ref{fig_cp_yield}, an equivalent plot for the $D\to K^+K^-\pi^+\pi^-$ events, tagged with a CP even tag mode $D\to K^+K^-$ and a CP odd tag mode $K_S^0\pi^0$, without binning.
 
 \begin{figure}[H] 
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/DoubleTagYieldFlavour.png}
     \caption{Binned double tag yield of $K^+K^-\pi^+\pi^-$ versus $K^\pm\pi^\mp$ events.}
     \label{fig_flavour_yield}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
-    \includegraphics[width=1\textwidth]{example-image-a}
+    \includegraphics[width=1\textwidth]{Plots/DoubleTagYieldInclusiveCP.png}
   \caption{Inclusive double tag yield of $K^+K^-\pi^+\pi^-$ versus $K^+K^-$ and $K_S^0\pi^0$ events.}
     \label{fig_cp_yield}
   \end{subfigure}
 \end{figure}
+
+The LHCb model agrees reasonably well with the BESIII dataset. However, these are raw bin yields without any efficiency or bin migration corrections, and a perfect agreement is therefore not expected.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion of future work}

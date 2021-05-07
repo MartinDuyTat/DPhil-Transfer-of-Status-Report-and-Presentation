@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{cite_CKM}
+Makoto Kobayashi and Toshihide Maskawa.
+\newblock {CP-Violation in the Renormalizable Theory of Weak Interaction}.
+\newblock {\em Progress of Theoretical Physics}, 49:652--657, 02 1973.
+
+\bibitem{cite_LHCbGGSZKSpipi}
+Roel Aaij et~al.
+\newblock {Measurement of the CKM angle $\gamma$ in $B^\pm\to D K^\pm$ and
+  $B^\pm \to D \pi^\pm$ decays with $D \to K_\mathrm S^0 h^+ h^-$}.
+\newblock {\em JHEP}, 02:169, 2021.
+
+\bibitem{cite_RademackerWilkinson}
+J.~Rademacker and G.~Wilkinson.
+\newblock {Determining the unitarity triangle angle $\gamma$ with a four-body
+  amplitude analysis of $B^{\pm}\to(K^+K^-\pi^+\pi^-)_DK^\pm$ decays}.
+\newblock {\em Physics Letters B}, 647(5):400--404, 2007.
+
+\bibitem{cite_AmplitudeModel}
+Roel Aaij et~al.
+\newblock {Search for $CP$ violation through an amplitude analysis of $D^0 \to
+  K^+ K^- \pi^+ \pi^-$ decays}.
+\newblock {\em JHEP}, 02:126, 2019.
+
+\bibitem{cite_LHCb}
+A.~Augusto Alves, Jr. et~al.
+\newblock {The LHCb Detector at the LHC}.
+\newblock {\em JINST}, 3:S08005, 2008.
+
+\bibitem{cite_BESIII}
+M.~Ablikim et~al.
+\newblock {Future Physics Programme of BESIII}.
+\newblock {\em Chin. Phys. C}, 44(4):040001, 2020.
+
+\bibitem{cite_AmpGen}
+T.~D. Evans.
+\newblock {AmpGen}.
+\newblock \url{https://github.com/GooFit/AmpGen}.
+
+\bibitem{cite_KSKKAnalysis}
+Medina Ablikim et~al.
+\newblock {Improved model-independent determination of the strong-phase
+  difference between $D^{0}$ and $\bar{D}^{0}\to
+  K^{0}_{\mathrm{S,L}}K^{+}K^{-}$ decays}.
+\newblock {\em Phys. Rev. D}, 102(5):052008, 2020.
+
+\end{thebibliography}
