@@ -199,7 +199,7 @@ Table \ref{table_tag_modes} shows the tag modes in this analysis.
 
 The tracking system includes the Vertex Locator (VELO). The VELO consists of silicon strip modules close to the interaction point, which provides high precision tracking and identification of displaced secondary vertices that are important for beauty and charm physics. A dipole magnet together with three tracking stations momentum of charged particles with an uncertainty of $0.5\%$-$1.0\%$. The two RICH detectors, together with the tracking system and the calorimeter system, separates kaons from pions.
 \subsection{BESIII}
-\noindent BESIII \cite{cite_BESIII} is a general purpose solenoidal detector. The main parts relevant to this analysis is the main drift chamber filled with Helium gas for measuring the momentum and $\dv{E}{x}$ of charged particles, a plastic scintillator based time of flight system for ID of charged particles and an electromagnetic calorimeter to measure neutral shower energies.
+\noindent BESIII \cite{cite_BESIII} is a general purpose solenoidal detector. The main parts relevant to this analysis is the main drift chamber filled with Helium gas for measuring the momentum and $\dv{E}{x}$ of charged particles, a plastic scintillator based time of flight system for ID of charged particles and an electromagnetic calorimeter to measure neutral shower energies. For this analysis, data from $e^+e^-$ collisions at the $\psi(3770)$ resonance is used.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Binning scheme}
@@ -244,11 +244,11 @@ The pull distributions of $x_\pm^{DK}$, $y_\pm^{DK}$, $\gamma$, $\delta_B$ and $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\texorpdfstring{$B^\pm$}{B} candidate selection}
 \subsection{Signal candidate requirements}
-\noindent The $B^\pm\to Dh^\pm (h = \pi, K)$ candidates, with $D\to K^+K^-\pi^+\pi^-$, are reconstructed from five charged tracks. The standard track and trigger requirements follow Ref. \cite{cite_LHCbGGSZKSpipi}. To ensure that $D$ is real, the $K^+K^-\pi^+\pi^-$ must be inside a $\SI{25}{\mega\eV}$ mass window of the $D^0$ PDG mass. Then the tracks are refitted with their invariant mass constrained to the $D^0$ mass and their momenta pointing to the primary vertex. A cut on the $\chi^2$ from this fit, at $\ln(\chi^2) < 3$, will remove most of the sidebands in the $D$ invariant mass.
+\noindent The $B^\pm\to Dh^\pm (h = \pi, K)$ candidates, with $D\to K^+K^-\pi^+\pi^-$, are reconstructed from five charged tracks. Currently, only Run $2$ data has been processed, but Run $1$ will be included later as well. The standard track and trigger requirements follow Ref. \cite{cite_LHCbGGSZKSpipi}. To ensure that $D$ is real, the $K^+K^-\pi^+\pi^-$ must be inside a $\SI{25}{\mega\eV}$ mass window of the $D^0$ PDG mass. Then the tracks are refitted with their invariant mass constrained to the $D^0$ mass and their momenta pointing to the primary vertex. A cut on the $\chi^2$ from this fit, at $\ln(\chi^2) < 3$, will remove most of the sidebands in the $D$ invariant mass.
 
 A mutually exclusive Particle Identification (PID) cut separates the $B^\pm\to D\pi^\pm$ and $DK^\pm$ candidates. Moreover, the $K^\pm$ daughters from $D$ and the $h^\pm$ daughter from $B^\pm$ are required to have momentum $p < \SI{100}{\giga\eV}$, which is the optimal range for the RICH.
 
-Sections \ref{subsection_BDT}-\ref{subsection_charmless_midID} discuss more specialized selections to remove specific backgrounds.
+Sections \ref{subsection_BDT}-\ref{subsection_charmless_misID} discuss more specialized selections to remove specific backgrounds.
 
 \subsection{Boosted Decision Tree}
 \label{subsection_BDT}
@@ -285,21 +285,18 @@ A fit to Fig. \ref{fig_Bmass_charmless} with a Gaussian signal and an exponentia
 \section{Fit to extract CP observables}
 \subsection{Global fit and invariant mass spectra}
 \label{section_global_fit}
-\noindent A global maximum likelihood fit of all $B^\pm$ candidates was performed to determine the total yields and mass shape parameters in the $Dh^\pm$ invariant mass spectrum. The signal and background parameterization are the same as those in Ref. \cite{cite_LHCbGGSZKSpipi}, including which variables are floated in the fit and which are fixed. In addition, all fixed parameters are identical to the those in Ref. \cite{cite_LHCbGGSZKSpipi}, and only minor adjustments are needed for the final analysis.
+\noindent A global ML fit of all $B^\pm\to Dh^\pm (h = K, \pi)$ candidates was performed to determine yields and mass shape parameters in the $B^\pm$ mass spectrum, shown in Fig. \ref{fig_Bmass_Global}. The mass shape parameterizations and their parameters are taken from Ref. \cite{cite_LHCbGGSZKSpipi}. Minor adjustments are needed for the final analysis.
 
-The combinatorial background is parameterized as an exponentially falling background. The signal is parameterized as a sum of a Gaussian $f_\text{G}(m|m_B, \sigma)$ and a modified Gaussian that accounts for the radiate tail and wider resolution of signal events that are poorly reconstructed. The PDF has the form
+The combinatorial background is parameterized by an exponential function. The signal is a sum of a Gaussian $f_\text{G}(m|m_B, \sigma)$ and a modified Gaussian,
 
 \begin{equation}
   f_\text{MG}(m|m_B, \sigma, \alpha_L, \alpha_R, \beta)\propto
   \begin{cases}
     \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_L\Delta m^2}\Big), \Delta m = m - m_B < 0 \\
     \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_R\Delta m^2}\Big), \Delta m = m - m_B > 0 \\
-  \end{cases}.
+  \end{cases},
 \end{equation}
-
-To the left of the $B^\pm$ invariant mass peak are contributions from partially reconstructed backgrounds. These are mainly $B^\pm$ or $B^0$ decays to $D^*h^\pm$, and $D^*\to D\pi$ or $D^*\to D\gamma$, where the pion or photon are not reconstructed. The missing mass leads to peaking to the left of the signal. Furthermore, in the $B^\pm\to DK^\pm$, there is a component of $B^\pm\to D\pi^\pm$ candidates, where the $\pi^\pm$ daughter is wrongly assigned a kaon hypothesis. This is a small component to the right of the signal. Furthermore, this channel also has a component of $B_s\to DK^\pm\pi^\mp$ and the pion is not reconstructed, and a component of partially reconstructed background from $B^\pm$ and $B^0$ candidates where the $\pi^\pm$ daughter is mis-identified as a $K^\pm$. All partially reconstructed background components are fitted with PDF shapes described in Ref. \cite{cite_LHCbGGSZKSpipi}.
-
-The final global fits for $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ are shown in Fig. \ref{fig_Bmass_Global}. The final yield of $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ candidates are $\SI{2290(59)}{}$ and $\SI{33113(211)}{}$, respectively.
+which accounts for the radiated tail and wider resolution. To the left of the $B^\pm$ mass peak are contributions from partially reconstructed backgrounds. These are mainly $B^\pm$ or $B^0$ decays to $Dh^\pm\pi$ or $D^*h^\pm$ with $D^*\to D\pi$ or $D^*\to D\gamma$. The missing pion or photon leads to peaking at lower mass. Furthermore, in the $B^\pm\to DK^\pm$ channel on the right of the signal, there is a mis-ID component of $B^\pm\to D\pi^\pm$ candidates, where the $\pi^\pm$ is identified as $K^\pm$. This channel also has a component of $B_s\to DK^\pm\pi^\mp$ with a missing pion, and a component of partially reconstructed background from $B^\pm$ and $B^0$ candidates where the $\pi^\pm$ daughter is mis-identified as a $K^\pm$. The PDF shapes of the partially reconstructed background at low mass is described in Ref. \cite{cite_LHCbGGSZKSpipi}. The fitted yield of $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ candidates are $\SI{2290(59)}{}$ and $\SI{33113(211)}{}$, respectively.
 
 \begin{figure}[H] 
   \centering
@@ -309,9 +306,11 @@ The final global fits for $B^\pm\to DK^\pm$ and $B^\pm\to D\pi^\pm$ are shown in
 \end{figure}
 
 \subsection{Binned CP fit and CP observables}
-\noindent After the global fit described in Section \ref{section_global_fit}, $B^\pm$ candidates are split by charge and phase space bins, using the binning scheme described in Section \ref{section_binning_scheme}. A simultaneous maximum likelihood fit is performed for each charge and bin. All mass shape parameters are fixed from the global fit while the yield of signal, total partially reconstructed background and combinatorial background in each bin are floated.
+\noindent After the global fit, $B^\pm$ candidates are split by charge and bins, using the binning scheme from Section \ref{section_binning_scheme}. A simultaneous ML fit is performed, with shape parameters from the global fit fixed. The yield of signal, partially reconstructed background and combinatorial background in each bin are floated.
 
-The final fitted parameters are shown in Figs. \ref{fig_xpm_ypm}-\ref{fig_xxi_yxi}. Geometrically, the angle between the points $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$ in Fig. \ref{fig_xpm_ypm} is $2\gamma$, and these six CP observables may be interpreted in terms of $\gamma$, $\delta_B^{DK}$, $r_B^{DK}$, $\delta^{D\pi}$ and $r_B^{D\pi}$. However, this step is only performed at the end to avoid any human bias in the final result.
+The fitted CP observables are shown in Figs. \ref{fig_xpm_ypm}-\ref{fig_xxi_yxi}, and they may be interpreted in terms of $\gamma$, $\delta_B^{DK}$, $r_B^{DK}$, $\delta^{D\pi}$ and $r_B^{D\pi}$. However, this step is only performed at the end to avoid any human bias in the final result. Geometrically, the angle between $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$ is $2\gamma$.
+
+To check the fit robustness, $1000$ toy datasets are generated, with both global and CP fit, using the fitted parameters. Each toy datasets is then run through the same fitting procecure and the pull distibutions of each floated variable is checked. It was found that all CP observables have pulls with zero mean and unit standard deviation. Two global fit parameters had slightly underestimated errors which can be accounted for.
 
 \begin{figure}[H] 
   \centering
@@ -329,33 +328,29 @@ The final fitted parameters are shown in Figs. \ref{fig_xpm_ypm}-\ref{fig_xxi_yx
   \end{subfigure}
 \end{figure}
 
-\subsection{Validation of fit procedure with toy studies}
-\noindent To ensure that the fit procedures are robust, for both the global and CP fit $1000$ toy datasets are generated with the fitted parameters. Each toy datasets is then run through the same fitting procecure and the pull distibutions of each floated variable is studied closely. It was found that no CP observables were biased or had any understimated errors. Two nuisance parameters in the global fit had slightly underestimated errors which are easily corrected for.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{External strong phase input from BESIII}
-\noindent Analysis of the BESIII data consists of $e^+e^-$ collisions at the $\psi(3770)$ resonance. In addition, there exists inclusive simulated samples of each category of events. The relevant category for this analysis is $D^0\bar{D^0}$ events, which has $21.8$ times more simulated events relative to data. Simulations of exclusive processes are generated when needed.
+\noindent The reconstruction of charged and neutral particles in BESIII data follows a similar strategy to Ref. \cite{cite_KSKKAnalysis}. The aim is to obtain the single and double tagged event yields. Peaking backgrounds are accounted for using the inclusive MC samples. The yields are used in a ML fit of Eqs. \eqref{eq_Mi}-\eqref{eq_Mij} to obtain $c_i$ and $s_i$.
 
-The most important aspects of this analysis is reconstructing single and double tagged event yields. Peaking backgrounds must be accounted for using the inclusive simulation samples. Finally, the yields are inputted into a maximum likelihood fit using Eqs. \eqref{eq_Mi}-\eqref{eq_Mij} to obtain $c_i$ and $s_i$.
-
-Since an $e^+e^-$ collider is a very clean environment, charged and neutral particles mostly follow the same reconstruction strategy, described in Ref. \cite{cite_KSKKAnalysis}. Since the beams are symmetric, each $D$ meson must have energy $E_\text{beam}$. When the daughters of a $D$ meson is reconstructed, the energy difference $\Delta E$ and beam-constrained mass $M_\text{BC}$ may be defined as
+Since the beams are symmetric, each $D$ meson has energy $E_\text{beam}$. For each $D$ meson, the energy difference $\Delta E$ and beam-constrained mass $M_\text{BC}$ may be defined as
 
 \begin{equation*}
-  \Delta E = \sum_i E_i - E_\text{beam}, \quad M_\text{BC} = \sqrt{E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2}.
+  \Delta E = \sum_i E_i - E_\text{beam}, \quad M_\text{BC} = \sqrt{E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2},
 \end{equation*}
+where the sum runs over all $D$ daughters. For a perfectly reconstructed $D$ meson, $\Delta E = 0$, but the peak is broadened by detector resolution. In tag modes with showers, the $\Delta E$ distribution has a left tail due to energy leakage through the calorimeter. The beam-constrained mass is the $D$ invariant mass, but using the more accurate beam energy.
 
-For a perfectly reconstructed $D$ meson, $\Delta E = 0$. However, due to detector resolution it is a peak of finite width. In addition, for tag modes with photon showers, the $\Delta E$ distribution has a left tail due to energy leakage through the calorimeter. The beam-constrained mass can be interpreted as the $D$ invariant mass, but using the well measured beam energy to improve the resolution.
+In single tagged events, a mode-dependent cut on $\Delta E$ is chosen by fitting a double Gaussian for the signal peak and a second order polynomial for the background. A cut around $\pm 3\sigma$ removes some combinatorial background. For modes with photon showers, the left cut is extended to $-4\sigma$.
 
-\subsection{\texorpdfstring{$K_S^0$}{KS0} veto}
-\noindent The main peaking background in this analysis is $D\to K_S^0K^+K^-$, where $K_S^0\to\pi^+\pi^-$. It has the same experimental signature as $D\to K^+K^-\pi^+\pi^-$ and therefore forms a signal peak in the $M_\text{BC}$ distribution. Most of this background is removed with a flight significance cut at $2.0$. The remaining background is from $K_S^0K^+K^-$ candidates where the $K_S^0$ decays close to the primary vertex, making it impossible to distinguish from $D\to K^+K^-\pi^+\pi^-$. This remaining background is therefore removed by imposing a veto on the $\pi^+\pi^-$ invariant mass. A sample of simulated $D\to K_S^0K^+K^-$ events was generated, but reconstructed as $D\to K^+K^-\pi^+\pi^-$ and the $\pi^+\pi^-$ invariant mass was studied. It was found that an asymmetric veto of $\SI{477}{\mega\eV} < m_{K_S^0} < \SI{507}{\mega\eV}$ was more efficient in removing this peaking background. After the veto, a negligible amount of the peaking background remained.
+The single tag yield is obtained from a ML fit of the $M_\text{BC}$ distribution. An Argus shape parameterizes the continuous combinatorial background. The signal shape is taken from an exclusive MC sample convolved with a Gaussian. Peaking backgrounds, if present, are accounted for with Gaussian shapes. An example of such a fit, for $D\to K^+K^-\pi^+\pi^-$ is shown in Fig. \ref{fig_styield}, where the largest peaking background is $D\to K_S^0K^+K^-$.
 
-\subsection{Single tag yield}
-\noindent The single tag yield is obtained by reconstructing events where one of the $D$ mesons decay into a tag mode, while the other $D$ meson is not reconstructed. A mode-dependent cut on $\Delta E$ is chosen by fitting a double Gaussian for the signal peak and a second order polynomial for the background in the $\Delta E$ distribution. A cut around $\pm 3\sigma$ is performed to remove combinatorial background. For modes with photon showers, the left cut is extended to $-4\sigma$.
+In double tagged events, the same cuts on $\Delta E$ used for single tagged events are applied. Fig. \ref{fig_dtyield} shows double tagged $D\to K^+K^-\pi^+\pi^-$ versus $D\to K^\pm\pi^\mp$, where the beam constrained mass for both $D$ mesons are plotted in a $2$D scatter plot.
 
-The single tag yield is then obtained by fitting the $M_\text{BC}$ distribution. The continuous combinatorial background is modelled with an Argus shape. The signal shape is taken from a simulated sample of the signal, convolved with a Gaussian to account for detector resolution. Peaking backgrounds, if present, are accounted for with Gaussian shapes, with shape and yield fixed from the inclusive MC samples. An example of such a fit is shown in Fig. \ref{fig_styield}.
+A sideband subtraction technique is used to obtain the yield. In Fig. \ref{fig_dtyield}, region $S$ is the signal region, while $A$ and $B$ are events where only one $D$ meson is real. Region $C$ are events where daughters tracks have been swapped between the $D$ mesons. Region $D$ contains non-charm  combinatorial background. The total background is estimated using
 
-\subsection{Double tag yield}
-\noindent The double tagged yield is obtained by reconstructing both $D$ mesons. The same cuts on $\Delta E$ used for single tagged events are applied, and the beam constrained mass for both $D$ mesons are plotted in a $2$D scatter plot, shown in Fig. \ref{fig_dtyield}. Since the yields are expected to be too low for a maximum likelihood fit, a sideband subtraction technique is employed instead.
+\begin{equation*}
+  B = P + \frac{a_S}{a_D}Y_D + \sum_{i = A, B, C}\frac{a_S}{a_i}\Big(Y_i - \frac{a_i}{A_D}Y_D\Big),
+\end{equation*}
+where $P$ is the peaking background found from inclusive MC, $Y_i$ is the yield in region $i$ and $a_i$ is the corresponding area of the region.
 
 \begin{figure}[H] 
   \centering
@@ -371,16 +366,10 @@ The single tag yield is then obtained by fitting the $M_\text{BC}$ distribution.
   \caption{Background subtraction technique of double tagged $M_\text{BC}$ distributions to obtain double tag yields}
     \label{fig_dtyield}
   \end{subfigure}
+  \caption{}
 \end{figure}
 
-In Fig. \ref{fig_dtyield}, the data for double tagged $D\to K^+K^-\pi^+\pi^-$ versus $D\to K^\pm\pi^\mp$ events are shown. The $M_\text{BC}$ region is split into $5$ regions. Region $S$ is the signal region, while $A$ and $B$ are events where one of the $D$ mesons are correctly reconstructed. Region $C$ are real events but daughter tracks between the $D$ mesons have been swapped. Finally, region $D$ contains purely combinatorial background. The total background is estimated using
-
-\begin{equation*}
-  B = P + \frac{a_S}{a_D}Y_D + \sum_{i = A, B, C}\frac{a_S}{a_i}\Big(Y_i - \frac{a_i}{A_D}Y_D\Big),
-\end{equation*}
-where $P$ is the peaking background found from inclusive MC, $Y_i$ is the yield in region $i$ and $a_i$ is the corresponding area of the region.
-
-Since the current dataset is insufficient for extracting $c_i$ and $s_i$, it is more instructive to compare the double tag yields with the prediction from the LHCb amplitude model. In Fig. \ref{fig_flavour_yield}, $D\to K^+K^-\pi^+\pi^-$ the yield of events tagged with the flavour tag $D\to K^\pm\pi^\mp$ are shown (data points), with the amplitude model prediction (solid line). The events have been binned using a $2\times 4$ binning scheme as described in Section \ref{section_binning_scheme}. In Fig. \ref{fig_cp_yield}, an equivalent plot for the $D\to K^+K^-\pi^+\pi^-$ events, tagged with a CP even tag mode $D\to K^+K^-$ and a CP odd tag mode $K_S^0\pi^0$, without binning. In both plots the yield is normalized by the single and double tag $K^\pm\pi^\mp$ yields.
+It is useful to compare the yields with the prediction from the LHCb model. In Fig. \ref{fig_flavour_yield}, $D\to K^\pm\pi^\mp$ vs $D\to K^+K^-\pi^+\pi^-$ events are shown (data points), with the amplitude model prediction (solid line), using $2\times 4$ bins. Fig. \ref{fig_cp_yield} shows $D\to K^+K^-\pi^+\pi^-$ events, tagged with a CP even tag mode $D\to K^+K^-$ and a CP odd tag mode $K_S^0\pi^0$, without binning. Both plots are normalized by the $K^\pm\pi^\mp$ yields. The LHCb model agrees reasonably well with the BESIII data. However, the yields have not been corrected for efficiency or bin migration effects, and a perfect agreement is therefore not expected.
 
 \begin{figure}[H] 
   \centering
@@ -397,9 +386,6 @@ Since the current dataset is insufficient for extracting $c_i$ and $s_i$, it is 
     \label{fig_cp_yield}
   \end{subfigure}
 \end{figure}
-
-The LHCb model agrees reasonably well with the BESIII dataset. However, these are raw bin yields without any efficiency or bin migration corrections, and a perfect agreement is therefore not expected. In particular, $K_S^0\pi^0$ is expected to have a lower reconstruction efficiency than $K^+K^-$ and $K^\pm\pi^\mp$ since it involves neutral particles, and therefore its double tag yield is lower than expected.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion of future work}
