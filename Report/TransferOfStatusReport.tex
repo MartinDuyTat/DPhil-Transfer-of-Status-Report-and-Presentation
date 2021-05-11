@@ -146,9 +146,9 @@ From the binned yields of $B^\pm\to DK^\pm$, one can do a Maximum Likelihood (ML
 
 To improve the fit stability and constrain $F_i$, which are free parameters, the decay mode $B^\pm\to D\pi^\pm$ is included fit. This adds another set of Eqs. \eqref{eq_Bm2DKm}-\eqref{eq_Bp2DKp} with $K\to\pi$. The common topology means $B^\pm\to DK^\pm$ and $D\pi^\pm$ will share the same $F_i$, but $B^\pm\to D\pi^\pm$ has smaller CP-violation because $r_B^{D\pi}\ll r_B^{DK}$. The fit stability is improved by introducing
 
-\begin{equation}
+\begin{equation*}
   x_\xi^{D\pi} = \Re(\xi^{D\pi}), \quad y_\xi^{D\pi} = \Im(\xi^{D\pi}), \quad \xi^{D\pi} = \frac{r_B^{D\pi}}{r_B^{DK}}e^{i(\delta_B^{D\pi} - \delta_B^{DK})}.
-\end{equation}
+\end{equation*}
 Therefore, the six CP observables in the ML fit are $x_\pm^{DK}$, $y_\pm^{DK}$, $x_\xi^{D\pi}$ and $y_\xi^{D\pi}$.
 
 \subsection{Strong phase from quantum correlations}
@@ -200,10 +200,9 @@ Under CP, $\Delta\delta_D\to -\Delta\delta_D$ and $\ln(r_D)\to -\ln(r_D)$. For $
 
 To optimize the binning, the bin boundaries are moved symmetrically around $\Delta\delta_D = 0$ to maximize $Q$, defined as the $x_\pm$ and $y_\pm$ sensitivity in a binned fit divided by that of an unbinned fit. It can be shown, with $N_i^\pm$ from Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate}, that
 
-\begin{equation}
+\begin{equation*}
   Q^2 = \frac{1}{2}\big(Q^2_+ + Q^2_-\big), \quad Q^2_\pm = 1 - \sum_i\frac{F_iF_{-i}\big(1 - c_i^2 - s_i^2\big)}{N_i^\pm}.
-  \label{eq_binning_Q}
-\end{equation}
+\end{equation*}
 
 To assess the binning scheme efficiency, $1000$ toy experiments, each with $2000$ $B^\pm$ candidates, were generated with the LHCb model in AmpGen, using $\gamma = \SI{75}{\degree}$, $\delta_B = \SI{130}{\degree}$ and $r_B = 0.1$. An unbinned ML fit was performed to establish a benchmark of $\Delta\gamma = \SI{11}{\degree}$.
 
@@ -234,7 +233,7 @@ Fig. \ref{fig_gamma_pull_study} shows the $\gamma$ distribution in the toy exper
 
 $B^\pm\to K^+K^-\pi^+\pi^-h^\pm$ candidates form a charmless background in the $B^\pm$ mass spectrum, but does not peak in the $D$ mass spectrum. To estimate the contamination, the $\chi^2$ cut was removed to preserve the $D$ mass sidebands. Inside the mass region $m(K^+K^-\pi^+\pi^-)\in[1770, 1820]\si{\mega\eV}$, a fit to the $B^\pm$ mass spectrum gives a yield of $\SI{2605(57)}{}$. A flight significance cut, defined as the flight distance divided by its error, reduces this yield to $\SI{110(19)}{}$. No charmless background was found for $B^\pm\to D\pi^\pm$.
 
-A significant mis-ID background is $B^\pm\to Dh^\pm$, $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$, where a pion is identified as a kaon. A Monte Carlo (MC) simulation sample indicated that $7.2\%$ of $B^\pm$ candidates inside the signal region are $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$. A tighter particle identification requirement reduces this this to $1.8\%$ while keeping $93\%$ of $D\to K^+K^-\pi^+\pi^-$ candidates.
+A significant mis-ID background is $B^\pm\to Dh^\pm$, $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$, where a pion is identified as a kaon. A Monte Carlo (MC) simulation sample indicated that $7.2\%$ of $B^\pm$ candidates inside the signal region are $D\to K^\pm\pi^\mp\pi^\pm\pi^\mp$. A tighter particle identification requirement reduces this to $1.8\%$ while keeping $93\%$ of $D\to K^+K^-\pi^+\pi^-$ candidates.
 
 For combinatorial background, a Boosted Decision Tree (BDT) was trained using MC samples as signal and the region $m(Dh^\pm)\in[5800, 7000]\si{\mega\eV}$ in data as background. $99.4\%$ of the combinatorial background was removed and $93.0\%$ of the signal remained.
 
