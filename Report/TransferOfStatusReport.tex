@@ -42,13 +42,13 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-\noindent A model-independent measurement of the CKM angle $\gamma$ is performed in $B^\pm\to Dh^\pm (h = K, \pi)$ decays, where $D\to K^+K^-\pi^+\pi^-$, using the LHCb Run $1$+$2$ dataset. An optimal phase space binning scheme is developed. Analysis of external strong phase inputs of $D\to K^+K^-\pi^+\pi^-$ from BESIII is performed in parallel.
+\noindent A model-independent measurement of the CKM angle $\gamma$ is performed in $B^\pm\to Dh^\pm (h = K, \pi)$ decays, where $D\to K^+K^-\pi^+\pi^-$, using the LHCb Run $1$+$2$ dataset. The measurement is based on an optimal binning scheme using strong-phase info determined from quantum-correlated $D^0\bar{D^0}$ pairs at BESIII.
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \noindent In the Standard Model, CP-violation is studied by measuring the lengths and angles of the Unitary Triangle of the CKM matrix \cite{cite_CKM}. The angle $\gamma = \arg(-V_{ud}V^*_{ub}/V_{cd}V^*_{cb})$, in particular, is the only angle accessible at tree level, with negligible theoretical uncertainties. Thus, a precise determination of $\gamma$ is a good Standard Model benchmark.
 
-$\gamma$ is sensitive to $b\to c\bar{u}s$ and $b\to u\bar{c}s$ interference, such as in $B^\pm\to DK^\pm$ decays. Fig. \ref{fig_feynman_B2DK} shows the $B^-\to D^0K^-$ mode on the left and the colour suppressed $B^-\to\bar{D^0}K^-$ channel on the right. They interfere when $D^0$ and $\bar{D^0}$ decay to a common state.
+$\gamma$ is sensitive to $b\to c\bar{u}s$ and $b\to u\bar{c}s$ interference, such as in $B^\pm\to DK^\pm$ decays reconstructed at LHCb. Fig. \ref{fig_feynman_B2DK} shows the $B^-\to D^0K^-$ mode and the colour suppressed $B^-\to\bar{D^0}K^-$ channel, and they interfere when $D^0$ and $\bar{D^0}$ decay to a common state.
 
 \begin{figure}[H]
   \centering
@@ -113,9 +113,9 @@ $\gamma$ is sensitive to $b\to c\bar{u}s$ and $b\to u\bar{c}s$ interference, suc
   \label{fig_feynman_B2DK}
 \end{figure}
 
-A wide range of subsequent $D$ decays has been studied, where $\gamma = (68.7^{+5.2}_{-5.1})^\circ$ is the single most precise measurement using $D\to K_S^0h^+h^-(h = \pi, K)$\cite{cite_LHCbGGSZKSpipi}. In the following analysis, the decay $D\to K^+K^-\pi^+\pi^-$ is considered. From similar channels, one expects $2000$ candidates from the LHCb Run $1$+$2$ dataset. The challenge with $D\to K^+K^-\pi^+\pi^-$ is the $5$D phase space, where the $D^0$ and $\bar{D^0}$ strong phases the vary non-trivially. An amplitude model may be used to predict the strong phases, at the cost of a model uncertainty.
+A wide range of subsequent $D$ decays has been studied, where $\gamma = (68.7^{+5.2}_{-5.1})^\circ$ is the single most precise measurement using $D\to K_S^0h^+h^-(h = \pi, K)$\cite{cite_LHCbGGSZKSpipi}. In the following analysis, the decay $D\to K^+K^-\pi^+\pi^-$ is considered. The challenge with $D\to K^+K^-\pi^+\pi^-$ is the $5$D phase space, where the $D^0$ and $\bar{D^0}$ strong-phases the vary non-trivially. An amplitude model may be used to predict the strong-phase variation, at the cost of a model uncertainty.
 
-In this analysis, a model-independent approach is chosen. Strong phases are independently measured, in phase space bins, at the BESIII charm factory. The current BESIII 2010-11 dataset is insufficient, but significantly more data is expected from 2022. An amplitude model for $D\to K^+K^-\pi^+\pi^-$, which is referred to as the LHCb model \cite{cite_AmplitudeModel}, will be used to study strong phase variations and develop an effective binning scheme. A poor binning scheme may decrease the statistical sensitivity, but will not bias the result. Thus, with a model-independent approach there is no modelling systematic uncertainty.
+In this analysis, a model-independent approach is chosen. Strong-phases will be independently measured, in phase space bins, at the BESIII charm factory. The current BESIII 2010-11 dataset is insufficient, but significantly more data is expected during 2022-23. An amplitude model for $D\to K^+K^-\pi^+\pi^-$, which is referred to as the LHCb model \cite{cite_AmplitudeModel}, will be used to study strong-phase variations and develop an effective binning scheme. A poor binning scheme may decrease the statistical sensitivity, but will not bias the result. Thus, with a model-independent approach there is no modelling systematic uncertainty.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Formalism}
@@ -126,7 +126,7 @@ The amplitude of $B^\pm\to DK^\pm$ is a coherent sum of the diagrams in Fig. \re
   \mathcal{A}(B^-\to DK^-) =& \mathcal{A}_D(\Phi) + r_B^{DK}e^{i(\delta_B^{DK} - \gamma)}\mathcal{A}_{\bar{D}}(\Phi), \label{eq_Bm2DKm} \\
   \mathcal{A}(B^+\to DK^+) =& \mathcal{A}_{\bar{D}}(\Phi) + r_B^{DK}e^{i(\delta_B^{DK} + \gamma)}\mathcal{A}_D(\Phi). \label{eq_Bp2DKp}
 \end{align}
-$r_B$ is the relative magnitude of the diagrams and $A_{D, \bar{D}}$ are $D$ decay amplitudes. Under CP, the $B^\pm$ decay strong phase $\delta_B^{DK}$ is invariant while the weak phase $\gamma$ swaps sign.
+$r_B$ is the relative magnitude of the diagrams and $A_{D, \bar{D}}$ are $D$ decay amplitudes. Under CP, the $B^\pm$ decay strong-phase $\delta_B^{DK}$ is invariant while the weak phase $\gamma$ swaps sign.
 
 The $B^\pm\to DK^\pm$ decay is considered in $2\times N$ phase space bins, labelled $i = -N, ..., N$, excluding zero. Bin $i$ is related to $-i$ by a CP transformation. When integrating the square of Eqs. \eqref{eq_Bm2DKm}-\eqref{eq_Bp2DKp} over phase space $\Phi$, the $B^\mp\to DK^\mp$ yield in bin $\pm i$ are
 
@@ -135,7 +135,7 @@ The $B^\pm\to DK^\pm$ decay is considered in $2\times N$ phase space bins, label
   N^+_{-i} =& h_{B^+}\Big[F_i + \big((x_+^{DK})^2 + (y_+^{DK})^2\big)\bar{F}_i + 2\sqrt{F_i\bar{F}_i}\big(x_+^{DK}c_i + y_+^{DK}s_i\big)\Big], \label{eq_Bp2DKp_rate} \\
   {c_i\choose s_i} =& \frac{\int_i\dd{\Phi}\abs{\mathcal{A}_D}\abs{\mathcal{A}_{\bar{D}}}{\cos(\Delta\delta_D)\choose\sin(\Delta\delta_D)}}{\sqrt{\int_i\dd{\Phi}\abs{\mathcal{A}_D}^2\int_i\dd{\Phi}\abs{\mathcal{A}_{\bar{D}}}^2}}, \quad F_i = \frac{\int_i\dd{\Phi}\abs{\mathcal{A}_D}^2}{\sum_i\int_i\dd{\Phi}\abs{\mathcal{A}_D}^2}, \quad \bar{F}_i = \frac{\int_i\dd{\Phi}\abs{\mathcal{A}_{\bar{D}}}^2}{\sum_i\int_i\dd{\Phi}\abs{\mathcal{A}_{\bar{D}}}^2}. \label{eq_hadronic_parameters}
 \end{align}
-$h_{B^\pm}$ are a normalization constants. $c_i$ ($s_i$) is the cosine (sine) of the strong phase difference $\Delta\delta_D$ between the $D^0$ and $\bar{D^0}$ decays, amplitude-averaged over bin $i$. $F_i$ is the fractional yield of $B^-\to D^0K^-$ in bin $i$. Assuming CP conservation in $D$ decays, $\bar{F}_i = F_{-i}$. Furthermore, the CP observables in Eqs. \eqref{eq_Bm2DKm}-\eqref{eq_Bp2DKp} are
+$h_{B^\pm}$ are a normalization constants. $c_i$ ($s_i$) is the cosine (sine) of the strong-phase difference $\Delta\delta_D$ between the $D^0$ and $\bar{D^0}$ decays, amplitude-averaged over bin $i$. $F_i$ is the fractional yield of $B^-\to D^0K^-$ in bin $i$. Assuming CP conservation in $D$ decays, $\bar{F}_i = F_{-i}$. Furthermore, the CP observables in Eqs. \eqref{eq_Bm2DKm}-\eqref{eq_Bp2DKp} are
 
 \begin{equation}
   x_\pm^{DK} = r_B^{DK}\cos(\delta_B^{DK}\pm\gamma), \quad  y_\pm^{DK} = r_B^{DK}\sin(\delta_B^{DK}\pm\gamma).
@@ -151,8 +151,8 @@ To improve the fit stability and constrain $F_i$, which are free parameters, the
 \end{equation*}
 Therefore, the six CP observables in the ML fit are $x_\pm^{DK}$, $y_\pm^{DK}$, $x_\xi^{D\pi}$ and $y_\xi^{D\pi}$.
 
-\subsection{Strong phase from quantum correlations}
-In $\psi(3770)\to D^0\bar{D^0}$ decays, $D^0\bar{D^0}$ is a correlated antisymmetric state, since $\psi(3770)$ has charge conjugation $\mathcal{C} = -1$. Thus, $c_i$ and $s_i$ can be measured using a double tag method.
+\subsection{Strong-phase from quantum-correlated \texorpdfstring{$D^0\bar{D^0}$}{DD} decays}
+In $\psi(3770)\to D^0\bar{D^0}$ decays, $D^0\bar{D^0}$ is a correlated antisymmetric state, since $\psi(3770)$ has charge conjugation $\mathcal{C} = -1$. Thus, $c_i$ and $s_i$ can be measured using a double-tag method.
 
 The number of events where only one $D$ meson is reconstructed as $D\to f$ is the single tag yield of $f$. If both $D$ mesons are reconstructed in the signal mode $D\to K^+K^-\pi^+\pi^-$ and tag mode $D\to f$, one obtains the double tag yield.
 
@@ -168,7 +168,7 @@ $K_i$ are the double tag yields, where the tag is a flavour tag, such as $D^0\to
   M_{ij} = \frac{N_{D\bar{D}}}{2S_fS_f'}\Big[K_iK'_{-j} + 2\sqrt{K_iK'_{-j}K_{-i}K'_j}(c_i'c_j + s_i's_j) + K_{-i}K'_j\Big].
   \label{eq_Mij}
 \end{equation}
-$N_{D\bar{D}}$ is the total number of $D^0\bar{D^0}$ pairs. If the tag is $K_S^0\pi^+\pi^-$, the $D\to K_S^0\pi^+\pi^-$ strong phases $c_i'$ and $s_i'$ are known \cite{cite_KSKKAnalysis}. If the tag is $K^+K^-\pi^+\pi^-$, then $c'_i = c_i$ and $s'_i = s_i$.
+$N_{D\bar{D}}$ is the total number of $D^0\bar{D^0}$ pairs. If the tag is $K_S^0\pi^+\pi^-$, the $D\to K_S^0\pi^+\pi^-$ strong-phases $c_i'$ and $s_i'$ are known \cite{cite_KSKKAnalysis}. If the tag is $K^+K^-\pi^+\pi^-$, then $c'_i = c_i$ and $s'_i = s_i$.
 
 \begin{table}[H]
   \centering
@@ -185,16 +185,16 @@ $N_{D\bar{D}}$ is the total number of $D^0\bar{D^0}$ pairs. If the tag is $K_S^0
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{LHCb and BESIII detectors}
-\noindent The LHCb \cite{cite_LHCb} is a single arm forward spectrometer designed to study beauty and charm hadrons in $pp$ collisions. The components important for this analysis are the tracking system and the Ring Imaging Cherencov counters (RICH1 and RICH2). The tracking system includes the Vertex Locator (VELO), which are silicon strip modules close to the interaction point, providing high precision tracking and identification of displaced secondary vertices. A dipole magnet and the tracking stations measure charged particle momenta. The RICH detectors provides identification of kaons and pions.
+\noindent LHCb \cite{cite_LHCb} is a single arm forward spectrometer designed to study beauty and charm hadrons in $pp$ collisions. The components important for this analysis are the tracking system and the Ring Imaging Cherencov counters (RICH1 and RICH2). The tracking system includes the Vertex Locator (VELO), which are silicon-strip modules close to the interaction point, providing high precision tracking and identification of displaced secondary vertices. A dipole magnet and the tracking stations measure charged particle momenta. The RICH detectors provides identification of kaons and pions. A $\SI{9}{\per\femto\barn}$ dataset at $\sqrt{s} = 7$, $8$ and $\SI{13}{\tera\eV}$ will be used in this analysis.
 
-BESIII \cite{cite_BESIII} is a general purpose solenoidal detector. The parts relevant to this analysis are the Helium gas drift chamber for measuring the momenta and $\dd{E}/\dd{x}$ of charged particles, a time of flight system for particle ID and an electromagnetic calorimeter to measure shower energies. $e^+e^-$ collisions at the $\psi(3770)$ resonance is used for this analysis.
+BESIII \cite{cite_BESIII} is a general purpose solenoidal detector. The parts most relevant to this analysis are the Helium gas drift chamber for measuring the momenta and $\dd{E}/\dd{x}$ of charged particles, a time of flight system for particle ID and an electromagnetic calorimeter to measure shower energies. The dataset currently under consideration has $\SI{2.9}{\per\femto\barn}$ of $e^+e^-\to\psi(3770)$ events, but this will grow to $\SI{20}{\per\femto\barn}$ over the next two years.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Binning scheme}
 \label{section_binning_scheme}
-\noindent In Ref. \cite{cite_LHCbGGSZKSpipi}, the $2$D phase space, visualized on a Dalitz plot, was separated into bins of similar strong phase to avoid diluting the amplitude-averaged $c_i$ and $s_i$. Cabbibo favoured and suppressed resonances were assigned bin numbers with opposite sign to enhance the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate}, and thus enhance the sensitivity to CP observables.
+\noindent In Ref. \cite{cite_LHCbGGSZKSpipi}, the $2$D phase space, visualized on a Dalitz plot, was separated into bins of similar strong-phase to avoid diluting the amplitude-averaged $c_i$ and $s_i$. Cabbibo favoured and suppressed resonances were assigned bin numbers with opposite sign to enhance the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate}, and thus enhance the sensitivity to CP observables.
 
-A binning scheme for the four-body decay $D\to K^+K^-\pi^+\pi^-$, where phase space is $5$D, cannot easily be visualized. Instead, the LHCb model, implemented in AmpGen \cite{cite_AmpGen}, is used to calculate the amplitude $\mathcal{A}(D)$ from the $D$ daughter momenta. Defining $\mathcal{A}(D^0)/\mathcal{A}(\bar{D^0})\equiv r_De^{i\Delta\delta_D}$, where $\Delta\delta_D$ and $r_D$ are the strong phase difference and relative magnitude, a simple, but naive, binning choice is uniformly spaced bins along $\Delta\delta_D$.
+A binning scheme for the four-body decay $D\to K^+K^-\pi^+\pi^-$, where phase space is $5$D, cannot easily be visualized. Instead, the LHCb model, implemented in AmpGen \cite{cite_AmpGen}, is used to calculate the amplitude $\mathcal{A}(D)$ from the $D$ daughter momenta. Defining $\mathcal{A}(D^0)/\mathcal{A}(\bar{D^0})\equiv r_De^{i\Delta\delta_D}$, where $\Delta\delta_D$ and $r_D$ are the strong-phase difference and relative magnitude, a simple, but naive, binning choice is uniformly spaced bins along $\Delta\delta_D$.
 
 Under CP, $\Delta\delta_D\to -\Delta\delta_D$ and $\ln(r_D)\to -\ln(r_D)$. For $\ln(r_D) > 0$ ($< 0$), the $\bar{D^0}$ decay is suppressed (favoured), relative to the $D^0$ decay. Therefore, the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate} may be enhanced if bins with $i > 0$ and $i < 0$ are separated along $\ln(r_D) = 0$.
 
@@ -204,7 +204,7 @@ To optimize the binning, the bin boundaries are moved symmetrically around $\Del
   Q^2 = \frac{1}{2}\big(Q^2_+ + Q^2_-\big), \quad Q^2_\pm = 1 - \sum_i\frac{F_iF_{-i}\big(1 - c_i^2 - s_i^2\big)}{N_i^\pm}.
 \end{equation*}
 
-To assess the binning scheme efficiency, $1000$ toy experiments, each with $2000$ $B^\pm$ candidates, were generated with the LHCb model in AmpGen, using $\gamma = \SI{75}{\degree}$, $\delta_B = \SI{130}{\degree}$ and $r_B = 0.1$. An unbinned ML fit was performed to establish a benchmark of $\Delta\gamma = \SI{11}{\degree}$.
+A minimal estimate of the signal yield, based on related studies, is $2000$ $B^\pm$ candidates from LHCb Run $1$+$2$. To assess the achievable $\gamma$ precision and the sensitivity loss due to binning, $1000$ toy experiments, each with $2000$ $B^\pm$ candidates, were generated with the LHCb model in AmpGen, using $\gamma = \SI{75}{\degree}$, $\delta_B = \SI{130}{\degree}$ and $r_B = 0.1$. An unbinned ML fit was performed to establish a benchmark of $\Delta\gamma = \SI{11}{\degree}$.
 
 With $2\times 8$ bins, Fig. \ref{fig_binning_scheme} shows the optimal binning scheme, with $Q = 0.90$, indicating that $10\%$ sensitivity is lost due to binning. Using the binning in Fig. \ref{fig_binning_scheme}, a ML fit was performed on each toy experiment using Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate} to extract $x_\pm^{DK}$ and $y_\pm^{DK}$. $c_i$, $s_i$ and $F_i$ were obtained from Monte Carlo integration of Eqs. \eqref{eq_hadronic_parameters} with $\mathcal{A}(D)$ from the LHCb model. Finally, $\gamma$, $\delta_B$ and $r_B$ were obtained from $x_\pm^{DK}$ and $y_\pm^{DK}$ using Eqs. \eqref{eq_xy_cp}.
 
@@ -229,7 +229,7 @@ Fig. \ref{fig_gamma_pull_study} shows the $\gamma$ distribution in the toy exper
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\texorpdfstring{$B^\pm$}{B} candidate selection}
-\noindent The $B^\pm\to (K^+K^-\pi^+\pi^-)_Dh^\pm$ candidates are reconstructed using standard candidate requirements from Ref. \cite{cite_LHCbGGSZKSpipi}. The $K^+K^-\pi^+\pi^-$ invariant mass must be within $\SI{25}{\mega\eV}$ of the $D^0$ mass. The tracks are refitted with the $D$ invariant mass constrained and its momentum pointing towards $B^\pm$. A cut on $\chi^2$ from this fit removes the $D$ mass sidebands.
+\noindent The $B^\pm\to (K^+K^-\pi^+\pi^-)_Dh^\pm$ candidates in the LHCb dataset are reconstructed using standard candidate requirements from Ref. \cite{cite_LHCbGGSZKSpipi}. The $K^+K^-\pi^+\pi^-$ invariant mass must be within $\SI{25}{\mega\eV}$ of the $D^0$ mass. The tracks are refitted with the $D$ invariant mass constrained and its momentum pointing towards $B^\pm$. A cut on $\chi^2$ from this fit removes the $D$ mass sidebands.
 
 $B^\pm\to K^+K^-\pi^+\pi^-h^\pm$ candidates form a charmless background in the $B^\pm$ mass spectrum, but does not peak in the $D$ mass spectrum. To estimate the contamination, the $\chi^2$ cut was removed to preserve the $D$ mass sidebands. Inside the mass region $m(K^+K^-\pi^+\pi^-)\in[1770, 1820]\si{\mega\eV}$, a fit to the $B^\pm$ mass spectrum gives a yield of $\SI{2605(57)}{}$. A flight significance cut, defined as the flight distance divided by its error, reduces this yield to $\SI{110(19)}{}$. No charmless background was found for $B^\pm\to D\pi^\pm$.
 
@@ -239,12 +239,12 @@ For combinatorial background, a Boosted Decision Tree (BDT) was trained using MC
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\texorpdfstring{$B^\pm$}{B} global mass fit and binned CP fit}
-\noindent A global ML fit of the $B^\pm$ mass spectrum, shown in Fig. \ref{fig_Bmass_Global}, was performed to determine global yields and shape parameters, with shape parameterizations from Ref. \cite{cite_LHCbGGSZKSpipi}. The final analysis requires minor adjustments. Currently, only Run $2$ data has been processed.
+\noindent A global ML fit of the $B^\pm$ mass spectrum, shown in Fig. \ref{fig_Bmass_Global}, was performed to determine global yields and shape parameters, with shape parameterizations from Ref. \cite{cite_LHCbGGSZKSpipi}. The final analysis requires minor adjustments. Currently, only Run $2$ data have been processed.
 
 \begin{figure}[H] 
   \centering
   \includegraphics[width=1\textwidth]{Plots/GlobalFit.png}
-  \caption{Global mass fit of $B^\pm\to DK^\pm$ (left) and $B^\pm\to D\pi^\pm$ (right).}
+  \caption{Global mass fit of $B^\pm\to DK^\pm$ (left) and $B^\pm\to D\pi^\pm$ (right) in LHCb data.}
   \label{fig_Bmass_Global}
 \end{figure}
 
@@ -257,9 +257,9 @@ The combinatorial background is parameterized by an exponential function. The si
     \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_R\Delta m^2}\Big), \quad \Delta m = m - m_B > 0, \\
   \end{cases}
 \end{equation}
-which accounts for the radiated tail and wider resolution. To the left of the $B^\pm$ mass peak are partially reconstructed $B^\pm$, $B^0$ and $B_s$ decays where a $\pi^\pm$ or $\gamma$ is missed, indicated by $[\pi^\pm/\gamma]$ in the legend. In the $B^\pm\to DK^\pm$ channel, there is a mis-ID component of $B^\pm\to D\pi^\pm$ , and a partially reconstructed mis-ID component, where $\pi^\pm$ is misidentified as $K^\pm$. The yields of $B^\pm\to DK^\pm$ and $D\pi^\pm$ candidates are $\SI{2290(59)}{}$ and $\SI{33113(211)}{}$.
+which accounts for the radiated tail and wider resolution. To the left of the $B^\pm$ mass peak are partially reconstructed $B^\pm$, $B^0$ and $B_s$ decays where a $\pi^\pm$ or $\gamma$ is missed, indicated by $[\pi^\pm/\gamma]$ in the legend. In the $B^\pm\to DK^\pm$ channel, there is a mis-ID component of $B^\pm\to D\pi^\pm$ , and a partially reconstructed mis-ID component, where $\pi^\pm$ is misidentified as $K^\pm$. The yield of $B^\pm\to DK^\pm$ candidates is $\SI{2290(59)}{}$. Although this is the signal yield from Run $2$ alone, it is higher than the original estimate. The yield of $B^\pm\to D\pi^\pm$ is $\SI{33113(211)}{}$.
 
-After the global fit, $B^\pm$ candidates are split by charge and bins, using the binning in Fig. \ref{fig_binning_scheme}. A ML fit is performed, with shape parameters from the global fit fixed, but the yields are floated. The fitted CP observables are shown in Fig. \ref{fig_cp_observables}. Geometrically, the angle between $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$ is $2\gamma$, but the exact value is blinded.
+After the global fit, $B^\pm$ candidates are split by charge and bins, using the binning in Fig. \ref{fig_binning_scheme}. $c_i$ and $s_i$ are taken from the LHCb model in this study. A ML fit is performed, with shape parameters from the global fit fixed, but the yields are floated. The fitted CP observables are shown in Fig. \ref{fig_cp_observables}. Geometrically, the angle between $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$ is $2\gamma$, but the exact value is blinded.
 
 To check the fit robustness, $1000$ toy datasets are generated, for both global and CP fits, using the fitted parameters. Each toy is run through the fitting procedure. All CP observables had pulls consistent with zero mean and unit standard deviation.
 
@@ -278,7 +278,7 @@ To check the fit robustness, $1000$ toy datasets are generated, for both global 
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{External strong phase input from BESIII}
+\section{External strong-phase input from BESIII}
 \noindent Event reconstruction at BESIII follows Ref. \cite{cite_KSKKAnalysis}. The single tag yield is obtained from a ML fit to the beam constrained $D$ mass $M_\text{BC} = (E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2)^{1/2}$, shown in Fig. \ref{fig_styield} for $D\to K^+K^-\pi^+\pi^-$. Peaking backgrounds are accounted for using inclusive MC. The main component, in green, is $D\to K_S^0K^+K^-$. The signal shape is a MC sample convolved with a Gaussian. An Argus shape parameterizes the combinatorial background.
 
 \begin{figure}[H] 
@@ -323,7 +323,7 @@ Fig. \ref{fig_cpflavour_yield} shows, on the left, $D\to K^\pm\pi^\mp$ double ta
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion and future work}
-\noindent The current results are consistent with prior expectations in both LHCb and BESIII. The next steps in the LHCb analysis is optimization of cuts and adjusting shape parameters, in addition to a systematics study. For BESIII, the yields of all tag modes must be finalized. Finally, the analyses will be combined into a first $\gamma$ determination in this channel.
+\noindent The current results are consistent with prior expectations in both LHCb and BESIII. The next steps in the LHCb analysis is optimization of cuts and adjusting shape parameters, in addition to a systematics study. For BESIII, the selection of all tag modes must be finalized and the yields determined on the current and future datasets. Finally, the analyses will be combined into a first $\gamma$ determination in this channel.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                          
 \bibliography{references}
@@ -331,7 +331,18 @@ Fig. \ref{fig_cpflavour_yield} shows, on the left, $D\to K^\pm\pi^\mp$ double ta
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section{DPhil thesis plan}
-\noindent Discuss DPhil thesis plan with Guy first!
+\section*{DPhil thesis plan}
+\begin{enumerate}
+  \item{Introduction and theory}
+  \item{LHCb and BESIII detectors}
+  \item{TORCH sub-detector (Time Of internally Reflected CHerenkov light)}
+  \item{Formalism and optimization of binning scheme}
+  \item{BESIII event selection}
+  \item{Determination of strong-phases}
+  \item{LHCb candidate selection}
+  \item{Global $B^\pm$ mass spectrum fit}
+  \item{Binned CP fit and determination of $\gamma$}
+  \item{Conclusion}
+\end{enumerate}
 
 \end{document}
