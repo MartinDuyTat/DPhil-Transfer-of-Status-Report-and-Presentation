@@ -194,7 +194,7 @@ BESIII \cite{cite_BESIII} is a general purpose solenoidal detector. The parts mo
 \label{section_binning_scheme}
 \noindent In Ref. \cite{cite_LHCbGGSZKSpipi}, the $2$D phase space, visualized on a Dalitz plot, was separated into bins of similar strong-phase to avoid diluting the amplitude-averaged $c_i$ and $s_i$. Cabbibo favoured and suppressed resonances were assigned bin numbers with opposite sign to enhance the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate}, and thus enhance the sensitivity to CP observables.
 
-A binning scheme for the four-body decay $D\to K^+K^-\pi^+\pi^-$, where phase space is $5$D, cannot easily be visualized. Instead, the LHCb model, implemented in AmpGen \cite{cite_AmpGen}, is used to calculate the amplitude $\mathcal{A}(D)$ from the $D$ daughter momenta. Defining $\mathcal{A}(D^0)/\mathcal{A}(\bar{D^0})\equiv r_De^{i\Delta\delta_D}$, where $\Delta\delta_D$ and $r_D$ are the strong-phase difference and relative magnitude, a simple, but naive, binning choice is uniformly spaced bins along $\Delta\delta_D$.
+The $5$D phase space of $D\to K^+K^-\pi^+\pi^-$ is not easily visualized. Instead, the LHCb model, implemented in AmpGen \cite{cite_AmpGen}, is used to calculate the amplitude $\mathcal{A}(D)$ from the $D$ daughter momenta. Defining $\mathcal{A}(D^0)/\mathcal{A}(\bar{D^0})\equiv r_De^{i\Delta\delta_D}$, where $\Delta\delta_D$ and $r_D$ are the strong-phase difference and relative magnitude, $\Delta\delta_D$ is first uniformly separated into bins.
 
 Under CP, $\Delta\delta_D\to -\Delta\delta_D$ and $\ln(r_D)\to -\ln(r_D)$. For $\ln(r_D) > 0$ ($< 0$), the $\bar{D^0}$ decay is suppressed (favoured), relative to the $D^0$ decay. Therefore, the interference terms in Eqs. \eqref{eq_Bm2DKm_rate}-\eqref{eq_Bp2DKp_rate} may be enhanced if bins with $i > 0$ and $i < 0$ are separated along $\ln(r_D) = 0$.
 
@@ -257,9 +257,9 @@ The combinatorial background is parameterized by an exponential function. The si
     \exp\Big(\frac{-\Delta m^2(1 + \beta\Delta m^2)}{2\sigma^2 + \alpha_R\Delta m^2}\Big), \quad \Delta m = m - m_B > 0, \\
   \end{cases}
 \end{equation}
-which accounts for the radiated tail and wider resolution. To the left of the $B^\pm$ mass peak are partially reconstructed $B^\pm$, $B^0$ and $B_s$ decays where a $\pi^\pm$ or $\gamma$ is missed, indicated by $[\pi^\pm/\gamma]$ in the legend. In the $B^\pm\to DK^\pm$ channel, there is a mis-ID component of $B^\pm\to D\pi^\pm$ , and a partially reconstructed mis-ID component, where $\pi^\pm$ is misidentified as $K^\pm$. The yield of $B^\pm\to DK^\pm$ candidates is $\SI{2290(59)}{}$. Although this is the signal yield from Run $2$ alone, it is higher than the original estimate. The yield of $B^\pm\to D\pi^\pm$ is $\SI{33113(211)}{}$.
+which accounts for the radiated tail. To the left of the signal are partially reconstructed $B_{(s)}$ decays where a $\pi^\pm$ or $\gamma$ is missed, indicated by $[\pi/\gamma]$. For $B^\pm\to DK^\pm$, there is a mis-ID component of $B^\pm\to D\pi^\pm$ , and a partially reconstructed mis-ID component, where $\pi^\pm$ is misidentified as $K^\pm$. The $B^\pm\to DK^\pm$ signal yield, from Run $2$ alone, is $\SI{2290(59)}{}$, which is higher than the original estimate. The $B^\pm\to D\pi^\pm$ yield is $\SI{33113(211)}{}$.
 
-After the global fit, $B^\pm$ candidates are split by charge and bins, using the binning in Fig. \ref{fig_binning_scheme}. $c_i$ and $s_i$ are taken from the LHCb model in this study. A ML fit is performed, with shape parameters from the global fit fixed, but the yields are floated. The fitted CP observables are shown in Fig. \ref{fig_cp_observables}. Geometrically, the angle between $(x_+^{DK}, y_+^{DK})$ and $(x_-^{DK}, y_-^{DK})$ is $2\gamma$, but the exact value is blinded.
+Finally, $B^\pm$ candidates are split by charge and bins, using the binning in Fig. \ref{fig_binning_scheme}. The current study uses $c_i$ and $s_i$ from the LHCb model. A fit is performed with shape parameters fixed from the global fit, but the yields are floated. Fig. \ref{fig_cp_observables} shows the fitted CP observables. The geometrical angle between $(x_\pm, y_\pm)$ is $2\gamma$, but its exact value is blinded.
 
 To check the fit robustness, $1000$ toy datasets are generated, for both global and CP fits, using the fitted parameters. Each toy is run through the fitting procedure. All CP observables had pulls consistent with zero mean and unit standard deviation.
 
@@ -295,7 +295,7 @@ To check the fit robustness, $1000$ toy datasets are generated, for both global 
     \caption{}
     \label{fig_dtyield}
   \end{subfigure}
-  \caption{Fit of $K^+K^-\pi^+\pi^-$ single tag $M_\text{BC}$ distribution (left) and background subtraction technique of $K^+K^-\pi^+\pi^-$ vs $K^\mp\pi^\pm$ double tag (right).}
+  \caption{$M_\text{BC}$ of single tag $K^+K^-\pi^+\pi^-$ (left) and double tag $K^+K^-\pi^+\pi^-$ vs $K^\mp\pi^\pm$ (right).}
 \end{figure}
 
 For double tag yields, a sideband subtraction technique is used. Fig. \ref{fig_dtyield} shows $D\to K^+K^-\pi^+\pi^-$ versus $D\to K^\pm\pi^\mp$ events, where the $M_\text{BC}$ for each $D$ meson is plotted in a $2$D scatter plot. Region $S$ is the signal region, while $A$ and $B$ contain only one real $D$ meson. In region $C$, daughters have been swapped between the $D$ mesons. Region $D$ contains non-charm background. The background is estimated using
@@ -323,7 +323,7 @@ Fig. \ref{fig_cpflavour_yield} shows, on the left, $D\to K^\pm\pi^\mp$ double ta
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion and future work}
-\noindent The current results are consistent with prior expectations in both LHCb and BESIII. The next steps in the LHCb analysis is optimization of cuts and adjusting shape parameters, in addition to a systematics study. For BESIII, the selection of all tag modes must be finalized and the yields determined on the current and future datasets. Finally, the analyses will be combined into a first $\gamma$ determination in this channel.
+\noindent The current results at both LHCb and BESIII are consistent with expectations. The next steps in the LHCb analysis are cut optimizations and systematics studies. For BESIII, all tag mode selections must be finalized and the yields determined on the current and future datasets. The analyses will be combined into a first $\gamma$ determination in this channel.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                          
 \bibliography{references}
