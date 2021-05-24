@@ -279,31 +279,28 @@ To check the fit robustness, $1000$ toy datasets are generated, for both global 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{External strong-phase input from BESIII}
-\noindent Event reconstruction at BESIII follows Ref. \cite{cite_KSKKAnalysis}. The single tag yield is obtained from a ML fit to the beam constrained $D$ mass $M_\text{BC} = (E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2)^{1/2}$, shown in Fig. \ref{fig_styield} for $D\to K^+K^-\pi^+\pi^-$. Peaking backgrounds are accounted for using inclusive MC. The main component, in green, is $D\to K_S^0K^+K^-$. The signal shape is a MC sample convolved with a Gaussian. An Argus shape parameterizes the combinatorial background.
+\noindent Event reconstruction at BESIII follows Ref. \cite{cite_KSKKAnalysis}. The single tag yield is obtained from a ML fit to the beam constrained $D$ mass $M_\text{BC} = (E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2)^{1/2}$, shown on the left in Fig. \ref{fig_stdtyields} for $D\to K^+K^-\pi^+\pi^-$. Peaking backgrounds are fixed from inclusive MC. The main component, in green, is $D\to K_S^0K^+K^-$. The signal shape is a MC sample convolved with a Gaussian. An Argus shape parameterizes the combinatorial background.
 
 \begin{figure}[H] 
   \centering
   \begin{subfigure}{0.5\textwidth}
     \centering
     \includegraphics[width=1\textwidth]{Plots/KKpipiSingleTagMBCPlot.png}
-    \caption{}
-    \label{fig_styield}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
     \centering
     \includegraphics[width=1\textwidth]{Plots/KpiDoubleTagYield.png}
-    \caption{}
-    \label{fig_dtyield}
   \end{subfigure}
   \caption{$M_\text{BC}$ of single tag $K^+K^-\pi^+\pi^-$ (left) and double tag $K^+K^-\pi^+\pi^-$ vs $K^\mp\pi^\pm$ (right).}
+  \label{fig_stdtyields}
 \end{figure}
 
-For double tag yields, a sideband subtraction technique is used. Fig. \ref{fig_dtyield} shows $D\to K^+K^-\pi^+\pi^-$ versus $D\to K^\pm\pi^\mp$ events, where the $M_\text{BC}$ for each $D$ meson is plotted in a $2$D scatter plot. Region $S$ is the signal region, while $A$ and $B$ contain only one real $D$ meson. In region $C$, daughters have been swapped between the $D$ mesons. Region $D$ contains non-charm background. The background is estimated using
+For double tag yields, a sideband subtraction technique is used. Fig. \ref{fig_stdtyields}, on the right, shows $D\to K^+K^-\pi^+\pi^-$ versus $D\to K^\pm\pi^\mp$ events, where the $M_\text{BC}$ for each $D$ meson is plotted in a $2$D scatter plot. Region $S$ is the signal region, while $A$ and $B$ contain only one real $D$ meson. In region $C$, daughters have been swapped between the $D$ mesons. Region $D$ contains non-charm background. The background is estimated using
 
 \begin{equation*}
   B = P + \frac{a_S}{a_D}Y_D + \sum_{i = A, B, C}\frac{a_S}{a_i}\Big(Y_i - \frac{a_i}{a_D}Y_D\Big),
 \end{equation*}
-where $P$ is the peaking background, and $Y_i$ and $a_i$ are the yield and area of region $i$. The single and double tag yields are used in a fit of Eqs. \eqref{eq_Mi}-\eqref{eq_Mij} to obtain $c_i$ and $s_i$.
+where $P$ is the peaking background, and $Y_i$ and $a_i$ are the yield and area of region $i$. The single and double tag yields will be used in a fit of Eqs. \eqref{eq_Mi}-\eqref{eq_Mij} to obtain $c_i$ and $s_i$.
 
 Fig. \ref{fig_cpflavour_yield} shows, on the left, $D\to K^\pm\pi^\mp$ double tag yields with the LHCb model prediction, using $2\times 4$ bins. On the right are the double tag yields with CP odd and even tags $K_S^0\pi^0$ and $K^+K^-$, normalized by $K^\pm\pi^\mp$ yields. The agreement is satisfactory, but the yields are not corrected for efficiencies yet, so perfect agreement is not expected.
 
