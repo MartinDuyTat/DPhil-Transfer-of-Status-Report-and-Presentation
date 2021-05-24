@@ -239,7 +239,7 @@ For combinatorial background, a Boosted Decision Tree (BDT) was trained using MC
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\texorpdfstring{$B^\pm$}{B} global mass fit and binned CP fit}
-\noindent A global ML fit of the $B^\pm$ mass spectrum, shown in Fig. \ref{fig_Bmass_Global}, was performed to determine global yields and shape parameters, with shape parameterizations from Ref. \cite{cite_LHCbGGSZKSpipi}. The final analysis requires minor adjustments. Currently, only Run $2$ data have been processed.
+\noindent A global ML fit of the $B^\pm$ mass spectrum, shown in Fig. \ref{fig_Bmass_Global}, was performed to determine global yields and shape parameters, with shape parameterisations from Ref. \cite{cite_LHCbGGSZKSpipi}. The final analysis requires minor adjustments. Currently, only Run $2$ data have been processed.
 
 \begin{figure}[H] 
   \centering
@@ -248,7 +248,7 @@ For combinatorial background, a Boosted Decision Tree (BDT) was trained using MC
   \label{fig_Bmass_Global}
 \end{figure}
 
-The combinatorial background is parameterized by an exponential function. The signal is a sum of a Gaussian $f_\text{G}(m|m_B, \sigma)$ and a modified Gaussian,
+The combinatorial background is parameterised by an exponential function. The signal is a sum of a Gaussian $f_\text{G}(m|m_B, \sigma)$ and a modified Gaussian,
 
 \begin{equation}
   f_\text{MG}(m|m_B, \sigma, \alpha_L, \alpha_R, \beta)\propto
@@ -279,7 +279,7 @@ To check the fit robustness, $1000$ toy datasets are generated, for both global 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{External strong-phase input from BESIII}
-\noindent Event reconstruction at BESIII follows Ref. \cite{cite_KSKKAnalysis}. The single tag yield is obtained from a ML fit to the beam constrained $D$ mass $M_\text{BC} = (E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2)^{1/2}$, shown on the left in Fig. \ref{fig_stdtyields} for $D\to K^+K^-\pi^+\pi^-$. Peaking backgrounds are fixed from inclusive MC. The main component, in green, is $D\to K_S^0K^+K^-$. The signal shape is a MC sample convolved with a Gaussian. An Argus shape parameterizes the combinatorial background.
+\noindent Event reconstruction at BESIII follows Ref. \cite{cite_KSKKAnalysis}. The single tag yield is obtained from a ML fit to the beam constrained $D$ mass $M_\text{BC} = (E_\text{beam}^2 - \abs{\sum_i\vb{p}_i}^2)^{1/2}$, shown on the left in Fig. \ref{fig_stdtyields} for $D\to K^+K^-\pi^+\pi^-$. Peaking backgrounds are fixed from inclusive MC. The main component, in green, is $D\to K_S^0K^+K^-$. The signal shape is a MC sample convolved with a Gaussian. An Argus shape parameterises the combinatorial background.
 
 \begin{figure}[H] 
   \centering
@@ -329,17 +329,52 @@ Fig. \ref{fig_cpflavour_yield} shows, on the left, $D\to K^\pm\pi^\mp$ double ta
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section*{DPhil thesis plan}
+\noindent During my 1st year, I started with developing the binning scheme, and selecting data at both LHCb and BESIII. The LHCb analysis has reached a stage where $\gamma$ can be determined, and the plan for 2nd year is to perform extensive background and systematics studies, before going through the review process. The data selection at BESIII is mainly finished and during 2nd year I will finalize the yields of all tag modes. I will run the same selection on the new 2022-2023 dataset. In addition, from Spring 2022 I will work on the TORCH testbeam programme at CERN. Below is an outline of this work, which will be included in my DPhil thesis:
 \begin{enumerate}
   \item{Introduction and theory}
+  \begin{itemize}
+    \item{Introduction to the Standard Model of Particle Physics}
+    \item{Motivation for studying CP-violation}
+  \end{itemize}
   \item{LHCb and BESIII detectors}
-  \item{TORCH sub-detector (Time Of internally Reflected CHerenkov light)}
+  \begin{itemize}
+    \item{Description of the LHCb and BESIII sub-detectors}
+    \item{Overview of data and simulation samples}
+  \end{itemize}
+  \item{Time Of internally Reflected CHerenkov light (TORCH) sub-detector}
+  \begin{itemize}
+    \item{Testbeam evaluation of the prototype module}
+  \end{itemize}
   \item{Formalism and optimization of binning scheme}
+  \begin{itemize}
+    \item{GGSZ method for model-independent $\gamma$ measurement}
+    \item{Motivations for an optimal binning of $B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ phase space}
+  \end{itemize}
   \item{BESIII event selection}
-  \item{Determination of strong-phases}
-  \item{LHCb candidate selection}
+  \begin{itemize}
+    \item{Selection of single and double tagged events}
+    \item{Identification of peaking backgrounds}
+  \end{itemize}
+  \item{Determination of yields and strong-phases}
+  \begin{itemize}
+    \item{Fit procedure to obtain $c_i$ and $s_i$ from single and double tag yields}
+    \item{Evaluation of systematic uncertainties}
+  \end{itemize}
+  \item{LHCb $B^\pm\to(K^+K^-\pi^+\pi^-)_Dh^\pm$ candidate selection}
+  \begin{itemize}
+    \item{Offline selection with rectangular cuts and BDT}
+    \item{Treatment of charmless, mis-ID and other backgrounds}
+  \end{itemize}
   \item{Global $B^\pm$ mass spectrum fit}
+  \begin{itemize}
+    \item{Signal shape and partially reconstructed background parameterisation}
+  \end{itemize}
   \item{Binned CP fit and determination of $\gamma$}
-  \item{Conclusion}
+  \begin{itemize}
+    \item{Fit of CP observables and interpretation in terms of $\gamma$}
+    \item{Study of systematic uncertainties}
+  \end{itemize}
+  \item{Conclusion and outlook}
 \end{enumerate}
 
 \end{document}
