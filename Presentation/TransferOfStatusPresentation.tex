@@ -77,14 +77,16 @@
 
 \begin{frame}{$\gamma$ and the unitary triangle}
   \begin{itemize}
-    \setlength\itemsep{1.3em}
+    \setlength\itemsep{1.0em}
     \item{Unitarity of CKM matrix: $V_{ud}V^*_{ub} + V_{cd}V^*_{cb} + V_{td}V^*_{tb} = 0$}
     \item{Define $\gamma = \text{arg}\Big(-\frac{V_{ud}V^*_{ub}}{V_{cd}V^*_{cb}}\Big)$}
     \item{Only CKM angle accessible at tree level $\implies$}
     \begin{itemize}
+      \item{Negligible theoretical uncertainties}
       \item{Ideal Standard Model benchmark}
     \end{itemize}
   \end{itemize}
+  \vspace{-0.2cm}
   \begin{figure}
     \includegraphics[width = 0.70\textwidth]{ckmfitter2.eps}
   \end{figure}
@@ -244,7 +246,7 @@
     \item{Two approaches:}
     \begin{enumerate}
       \item{Predict $\mathcal{A}(D)$ using an amplitude model}
-      \item{Split phase space into bins and use external strong-phase inputs}
+      \item{Model-independent measurement with external strong-phase inputs}
     \end{enumerate}
   \end{itemize}
 \end{frame}
@@ -271,8 +273,8 @@
       \item{Estimate $2000$ candidates from LHCb Run $1$+$2$}
       \item{Model-independent analysis reduces systematic uncertainties}
       \item{Much more data from BESIII during 2022-2023 for strong-phase inputs}
-      \item{New LHCb amplitude model \href{https://arxiv.org/abs/1811.08304}{JHEP 02 (2019) 126}}
-      \item{New era of $4$-body $\gamma$ measurements}
+      \item{Recent LHCb amplitude model \href{https://arxiv.org/abs/1811.08304}{JHEP 02 (2019) 126}}
+      \item{New era of $\gamma$ measurements with $4$-body decay modes}
       \begin{itemize}
         \item{$D\to K_S^0\pi^+\pi^-\pi^0$ by Belle \href{https://arxiv.org/abs/1908.09499}{JHEP 10 (2019) 178}}
         \item{Ongoing analysis of $D\to K^+\pi^-\pi^+\pi^-$ at LHCb}
@@ -287,12 +289,10 @@
     \item{Decay amplitudes:}
     \begin{itemize}
       \item{$\mathcal{A}(B^-\to DK^-) = \mathcal{A}(D^0) + r_Be^{i(\delta_B - \gamma)}\mathcal{A}(\bar{D^0})$}
-      \item{$\mathcal{A}(B^+\to DK^+) = \mathcal{A}(\bar{D^0}) + r_Be^{i(\delta_B + \gamma)}\mathcal{A}(D^0)$}
     \end{itemize}
-    \item{Split into bins $-8, ..., -1, +1, ..., +8$ and integrate over phase space:}
+    \item{Yield in bin $i$:}
     \begin{itemize}
       \item{$N^-_i = h_{B^-}\Big(K_i + \big(x_-^2 + y_-^2\big)\bar{K_i} + 2\sqrt{K_i\bar{K_i}}\big(x_-c_i + y_-s_i\big)\Big)$}
-      \item{$N^+_{-i} = h_{B^+}\Big(K_i + \big(x_+^2 + y_+^2\big)\bar{K_i} + 2\sqrt{K_i\bar{K_i}}\big(x_+c_i + y_+s_i\big)\Big)$}
     \end{itemize}
     \item{Fit to extract $x_\pm$ and $y_\pm$ $\implies$ Interpret in terms of $\gamma$, $r_B$, $\delta_B$}
   \end{itemize}
@@ -302,18 +302,6 @@
   \begin{block}{External strong-phase input}
     $c_i$, $s_i$: Amplitude-averaged strong phase difference of $D$ decay
   \end{block}
-\end{frame}
-
-\begin{frame}{Binning scheme}
-  \begin{itemize}
-    \setlength\itemsep{1.3em}
-    \item{Aim: Maximize interference $\implies$ Enhance $x_\pm$ and $y_\pm$ sensitivity}
-    \item{Analogy: $K_S\pi^+\pi^-$ Dalitz analysis}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \includegraphics[width = 0.6\textwidth]{DalitzKSpipi.png}
-  \end{figure}
 \end{frame}
 
 \begin{frame}{Binning scheme}
@@ -549,6 +537,18 @@
     \item{$s_i = \frac{\int_i\dd{\Phi}|\mathcal{A}(D^0)||\mathcal{A}(\bar{D^0})|\sin(\delta_D)}{\sqrt{\int_i\dd{\Phi}\abs{\mathcal{A}(D^0)}^2\int_i\dd{\Phi}\abs{\mathcal{A}(\bar{D^0})}^2}}$}
     \item{$K_i = \frac{\int_i\dd{\Phi}|\mathcal{A}(D^0)|^2}{\sum_j\int_j\dd{\Phi}\abs{\mathcal{A}(D^0)}^2}$}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Binning scheme}
+  \begin{itemize}
+    \setlength\itemsep{1.3em}
+    \item{Aim: Maximize interference $\implies$ Enhance $x_\pm$ and $y_\pm$ sensitivity}
+    \item{Analogy: $K_S\pi^+\pi^-$ Dalitz analysis}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 0.6\textwidth]{DalitzKSpipi.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Backup: Optimize bin widths}
