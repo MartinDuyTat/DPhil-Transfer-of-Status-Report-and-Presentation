@@ -4,5 +4,5 @@ This repository contains the material for my Transfer of Status interview, inclu
 ## To do list:
 * Write report DONE
 * Make presentation slides DONE
-* Answer questions on the question sheet 
+* Answer questions on the question sheet DONE
 * Make a list of seminar abstracts DONE
